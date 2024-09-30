@@ -1,7 +1,15 @@
-body {
-    background-color: #f0f0f0; /* Fondo gris claro para toda la página */
+/* General styles */
+html, body {
+    height: 100%; /* Establece altura al 100% */
     margin: 0; /* Elimina el margen por defecto */
 }
+
+.container {
+    display: flex; /* Utiliza Flexbox para el contenedor principal */
+    flex-direction: column; /* Organiza los hijos en columna */
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la vista */
+}
+
 
 /* Estilo para el contenedor principal */
 .menu-1 {
@@ -9,7 +17,7 @@ body {
     justify-content: space-between; /* Espacia los elementos de manera que estén al borde del contenedor */
     align-items: center; /* Alinea verticalmente los elementos al centro */
     padding: 10px; /* Espaciado interno del contenedor */
-    background-color: rgb(205, 255, 208); /* Color de fondo del contenedor */
+    background-color: rgb(173, 181, 174); /* Color de fondo del contenedor */
     border-bottom: 1px solid #ccc; /* Línea delgada en la parte inferior del contenedor */
 }
 
@@ -22,7 +30,7 @@ body {
 .logo-text {
     font-size: 30px; /* Tamaño de la fuente */
     font-weight: bold; /* Negrita */
-    color: #333; /* Color del texto */
+    color: #f9f6f6; /* Color del texto */
 }
 
 /* Estilo para el menú */
@@ -46,5 +54,89 @@ body {
     .menu-2 div:hover {
         color: #FFD700; /* Color dorado al pasar el ratón */
     }
+
+/*------------------------------------------------------------------------------------------------------*/
+
+/* Contenedor principal del cuerpo */
+.cuerpo {
+    display: flex; /* Flexbox para organizar las 3 secciones en fila */
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px; /* Espaciado horizontal entre los div */
+    margin-top: 20px;
+}
+
+/* Estilos para cada sección dentro del cuerpo */
+.perfil-usuario, .feed-publicaciones, .barra-lateral {
+    background-color: rgb(133, 35, 35);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
+}
+
+/* Estilo específico para cada sección */
+.perfil-usuario {
+    flex-basis: 20%; /* Perfil ocupa el 20% del ancho */
+}
+
+.feed-publicaciones {
+    flex-basis: 60%; /* Feed ocupa el 60% del ancho */
+}
+
+.barra-lateral {
+    flex-basis: 20%; /* Barra lateral ocupa el 20% del ancho */
+}
+
+/* Estilos para los div internos (los 5 divs) */
+.item {
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    margin-bottom: 10px; /* Añadir margen inferior para separar cada div */
+}
+
+/* Para el último .item, elimina el margen */
+.item:last-child {
+    margin-bottom: 0; /* Elimina el margen en el último item */
+}
+
+/* Efecto hover para los div internos */
+.item:hover {
+    background-color: #50a482;
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Estilo para el pie de página */
+.pie-pagina {
+    display: flex; /* Utiliza Flexbox para organizar las columnas */
+    justify-content: space-between; /* Espacia las columnas de manera uniforme */
+    padding: 20px; /* Espaciado interno */
+    background-color: rgb(205, 255, 208); /* Color de fondo */
+    border-top: 1px solid #ccc; /* Línea superior del pie de página */
+}
+
+/* Estilo para cada columna */
+.columna {
+    flex: 1; /* Las columnas ocuparán el mismo ancho */
+}
+
+/* Estilo para los encabezados de las columnas */
+.columna h4 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 18px; /* Tamaño de fuente */
+    font-weight: bold; /* Estilo de fuente negrita */
+    text-align: center; /*Se alinea en el centro*/
+}
+
+/* Estilo para el texto en las columnas */
+.columna p {
+    font-size: 14px; /* Tamaño de fuente */
+    color: #555; /* Color del texto */
+    text-align: center; /*Se alinea en el centro*/
+}
 
 
