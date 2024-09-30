@@ -1,59 +1,80 @@
-.container {
-    display: flex;                /* Habilitar Flexbox */
-    justify-content: space-between; /* Espacio entre los divs */
-    flex-wrap: wrap;             /* Permitir que los divs se ajusten en la misma línea */
-    width: 100%;                  /* Ancho completo del contenedor */
-    margin-bottom: 10px;         /* Espacio entre filas */
+/* Estilos generales para pantallas grandes (1024px o más) */
+.container1 {
+    display: flex;           /* Aplica flexbox para organizar los bloques en una fila */
+    gap: 10px;               /* Establece un espacio de 10px entre los bloques */
+    margin-bottom: 10px;     /* Espacio inferior entre el contenedor y el siguiente */
 }
 
-.mi-div {
-    flex: 1;                     /* Hacer que los divs ocupen el mismo espacio */
-    height: 100px;               /* Alto de cada div */
-    padding: 50px;               /* Espacio interno */
-    margin: 5px;                 /* Margen de 10px a todos los lados */
+.container1 div {
+    background-color: orange;    /* Color de fondo para los bloques del contenedor 1 */
+    width: calc(50% - 5px);          /* Cada bloque ocupa el 50% del ancho menos 5px (para mantener el gap de 10px) */
+    height: 100px;                   /* Altura fija para los bloques */
+    box-sizing: border-box;          /* Asegura que el padding y el borde se incluyan en el tamaño total */
 }
 
-.green {
-    background-color: green;     /* Color de fondo verde para Div 3 */
+.container2 div {
+    background-color: green;    /* Color de fondo para el bloque del contenedor 2 */
+    height: 300px;                   /* Altura fija */
+    margin-bottom: 10px;             /* Espacio inferior entre el contenedor y el siguiente */
 }
 
-.orange {
-    background-color: orange;    /* Color de fondo naranja para Div 1 y Div 2 */
+.container3 {
+    display: flex;           /* Aplica flexbox para organizar los bloques en una fila */
+    gap: 10px;               /* Establece un espacio de 10px entre los bloques */
+    margin-bottom: 10px;     /* Espacio inferior entre el contenedor y el siguiente */
 }
 
-.red {
-    background-color: red;       /* Color de fondo rojo para Div 4, 5 y 6 */
+.container3 div {
+    background-color: blue;     /* Color de fondo para los bloques del contenedor 3 */
+    width: calc(33.33% - 6.67px);    /* Cada bloque ocupa el 33.33% del ancho menos 6.67px (para mantener el gap de 10px) */
+    height: 170px;                   /* Altura fija para los bloques */
 }
 
-.blue {
-    background-color: blue;      /* Color de fondo azul para Div 7, 8, 9 y 10 */
+.container4 {
+    display: flex;           /* Aplica flexbox para organizar los bloques en una fila */
+    gap: 10px;               /* Establece un espacio de 10px entre los bloques */
 }
 
-/* Media query para pantallas de 1080px o menos */
-@media (max-width: 1080px) {
-    .container {
-        flex-direction: column;   /* Cambiar a columna en pantallas pequeñas */
+.container4 div {
+    background-color: gray;  /* Color de fondo para los bloques del contenedor 4 */
+    width: calc(25% - 7.5px);                /* Cada bloque ocupa el 25% del ancho menos 7.5px (para mantener el gap de 10px) */
+    height: 100px;                           /* Altura fija para los bloques */
+}
+
+/* Estilos para pantallas medianas (768px a 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .container1 div {
+        width: 100%;      /* Los bloques en este contenedor ocupan todo el ancho, en una sola fila por bloque */
     }
 
-    .full-width-container {
-        flex-direction: row;      /* Mantener los divs 7, 8, 9 y 10 en fila */
-        flex-wrap: wrap;          /* Permitir que algunos divs se ajusten en la siguiente fila */
+    .container3 div {
+        width: 100%;      /* Cada bloque azul en una fila individual ocupando todo el ancho */
     }
 
-    /* Para divs 9 y 10: Colocarlos en fila de dos */
-    .full-width-container > .mi-div:nth-child(n+3) {
-        width: 50%;               /* Hacer que los divs 9 y 10 ocupen el 48% del ancho */
-       
+    /* Ajustes para que los bloques grises se organicen de dos en dos */
+    .container4 {
+        display: flex;
+        flex-wrap: wrap;  /* Permite que los bloques se envuelvan, para que cuando no haya espacio suficiente, los bloques caigan en una nueva fila */
+    }
+
+    .container4 div {
+        width: calc(50% - 5px);    /* Cada bloque ocupa el 50% del ancho, creando dos columnas de bloques */
+        margin-bottom: 10px;       /* Espacio inferior entre los bloques, para separar las filas de bloques grises */
     }
 }
 
-/* Media query para pantallas de 540px o menos */
-@media (max-width: 540px) {
-    .container, .full-width-container {
-        flex-direction: column;   /* Poner todos los divs en columnas */
+/* Estilos para pantallas pequeñas (menos de 768px) */
+@media (max-width: 767px) {
+    .container1, .container3, .container4 {
+        display: block;  /* En pantallas pequeñas, se reorganiza en una sola columna */
     }
-    
-    .container > .mi-div, .full-width-container > .mi-div {
-        width: 100%;              /* Todos los divs ocupan el ancho completo */
+
+    .container1 div, .container3 div, .container4 div {
+        width: 100%;         /* Los bloques ocupan todo el ancho del contenedor */
+        margin-bottom: 10px; /* Añade un espacio inferior entre los bloques para separación vertical */
     }
 }
+
+apps-fileview.texmex_20240911.10_p3
+actividadBloques.css
+Mostrando actividadBloques.css.
