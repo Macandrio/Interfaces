@@ -1,27 +1,50 @@
+body {
+    background-color: #f0f0f0; /* Fondo gris claro para toda la página */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
 /* Estilo para el contenedor principal */
-.container {
+.menu-1 {
     display: flex; /* Utiliza Flexbox para alinear los elementos dentro del contenedor */
     justify-content: space-between; /* Espacia los elementos de manera que estén al borde del contenedor */
     align-items: center; /* Alinea verticalmente los elementos al centro */
     padding: 10px; /* Espaciado interno del contenedor */
-    background-color: #f8f8f8; /* Color de fondo del contenedor */
+    background-color: rgb(205, 255, 208); /* Color de fondo del contenedor */
     border-bottom: 1px solid #ccc; /* Línea delgada en la parte inferior del contenedor */
 }
 
-/* Estilo específico para el logo */
+/* Estilo para el logo */
 .logo {
-    height: 50px; /* Ajusta la altura de la imagen del logo; puedes cambiar este valor según tus necesidades */
+    height: 80px; /* Ajusta la altura a 80px; modifícalo según tus necesidades */
 }
 
-/* Estilo para el segundo contenedor (cuerpo) */
-.container:nth-child(2) {
-    padding: 20px; /* Espaciado interno mayor para el cuerpo */
-    text-align: center; /* Centra el texto dentro del contenedor */
+/* Estilo para el texto del logo */
+.logo-text {
+    font-size: 30px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
 }
 
-/* Estilo para el último contenedor (pie de página) */
-.container:last-child {
-    text-align: center; /* Centra el texto dentro del pie de página */
-    padding: 10px; /* Espaciado interno */
-    background-color: #eee; /* Color de fondo diferente para el pie de página */
+/* Estilo para el menú */
+.menu-2 {
+    display: flex; /* Utiliza Flexbox para alinear elementos en línea */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    background-color: #38b220; /* Color verde agua para el fondo del menú */
+    padding: 10px; /* Espaciado interno para el menú */
+    border-radius: 5px; /* Bordes redondeados */
 }
+
+/* Estilo para cada elemento del menú */
+.menu-2 div {
+    margin: 0 20px; /* Espacio entre elementos */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+    transition: color 0.3s; /* Transición suave para el color */
+}
+
+    /* Efecto hover para los elementos del menú */
+    .menu-2 div:hover {
+        color: #FFD700; /* Color dorado al pasar el ratón */
+    }
+
+
