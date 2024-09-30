@@ -1,0 +1,27 @@
+/* Estilo para el contenedor principal */
+.container {
+    display: flex; /* Utiliza Flexbox para alinear los elementos dentro del contenedor */
+    justify-content: space-between; /* Espacia los elementos de manera que estén al borde del contenedor */
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    padding: 10px; /* Espaciado interno del contenedor */
+    background-color: #f8f8f8; /* Color de fondo del contenedor */
+    border-bottom: 1px solid #ccc; /* Línea delgada en la parte inferior del contenedor */
+}
+
+/* Estilo específico para el logo */
+.logo {
+    height: 50px; /* Ajusta la altura de la imagen del logo; puedes cambiar este valor según tus necesidades */
+}
+
+/* Estilo para el segundo contenedor (cuerpo) */
+.container:nth-child(2) {
+    padding: 20px; /* Espaciado interno mayor para el cuerpo */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilo para el último contenedor (pie de página) */
+.container:last-child {
+    text-align: center; /* Centra el texto dentro del pie de página */
+    padding: 10px; /* Espaciado interno */
+    background-color: #eee; /* Color de fondo diferente para el pie de página */
+}
