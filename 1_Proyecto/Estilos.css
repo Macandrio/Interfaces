@@ -81,7 +81,7 @@ html, body {
 }
 
 .feed-publicaciones {
-    flex-basis: 60%; /* Feed ocupa el 60% del ancho */
+    flex-grow: 1; /* Permite que el feed ocupe cualquier espacio extra */
 }
 
 .barra-lateral {
@@ -127,7 +127,7 @@ html, body {
 /* Estilo para los encabezados de las columnas */
 .columna h4 {
     margin: 0; /* Elimina el margen por defecto */
-    font-size: 18px; /* Tamaño de fuente */
+    font-size: 17px; /* Tamaño de fuente */
     font-weight: bold; /* Estilo de fuente negrita */
     text-align: center; /*Se alinea en el centro*/
 }
@@ -139,4 +139,71 @@ html, body {
     text-align: center; /*Se alinea en el centro*/
 }
 
+/*------------------------------------------------------------------------------------------------------------------*/
 
+/*Estilos previos 768px*/
+
+/*------------------------------------------------------------------------------------------------------------------*/
+/* Estilos previos para Cabecera menu y logo  */
+@media (max-width: 768px) {
+    .menu-1 {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .logo {
+        margin-bottom: 10px; /* Espacio entre el logo y el menú */
+    }
+
+    .menu-2 {
+        width: 100%; /* Asegura que el menú ocupa todo el ancho */
+        justify-content: center; /* Centra el contenido del menú */
+    }
+}
+.menu-1 {
+    position: sticky; /* Hace que la cabecera se mantenga en la parte superior */
+    top: 0; /* Se fija a la parte superior de la ventana */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+/*---------------------------------------------------------------------------------------------------------------------*/
+/* Estilos previos para Cuerpo */
+@media (max-width: 768px) {
+    
+
+    .cuerpo {
+        flex-direction: column; /* Cambia la dirección del flex a columna */
+        align-items: stretch; /* Asegura que los hijos ocupen todo el ancho */
+    }
+
+    .perfil-usuario, .feed-publicaciones, .barra-lateral {
+        flex-basis: auto; /* Elimina los tamaños fijos para que se ajusten automáticamente */
+        width: 100%; /* Asegura que ocupen todo el ancho */
+    }
+
+    .perfil-usuario {
+        order: 1; /* Asegura que el perfil esté primero */
+    }
+
+    .feed-publicaciones {
+        order: 2; /* Asegura que el feed esté en el medio */
+    }
+
+    .barra-lateral {
+        order: 3; /* Asegura que la barra lateral esté al final */
+    }
+
+}
+/*----------------------------------------------------------------------------*/
+ /* Estilos previos para pie de pagina*/
+@media (max-width: 768px) {
+    .pie-pagina {
+        flex-direction: row; /* Mantiene las columnas en fila */
+        flex-wrap: wrap; /* Permite que las columnas se ajusten en filas */
+        justify-content: space-between; /* Espacia las columnas uniformemente */
+    }
+
+    .columna {
+        flex: 1 1 40%; /* Ocupa el 48% del ancho disponible y permite flexibilidad */
+        margin: 10px; /* Margen entre columnas */
+    }  
+}
