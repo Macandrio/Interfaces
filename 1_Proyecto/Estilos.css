@@ -1,11 +1,11 @@
 /* General styles */
 html, body {
     height: 100%; /* Establece altura al 100% */
-    margin: 0; /* Elimina el margen por defecto */
+
     background-color: #f0f4f8; /* Color de fondo del contenedor */
 }
 
-.container {
+.Contenedor {
     display: flex; /* Utiliza Flexbox para el contenedor principal */
     flex-direction: column; /* Organiza los hijos en columna */
     min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la vista */
@@ -22,110 +22,127 @@ html, body {
     background-color: #3a8e3a; /* Color de fondo del menú */    /*border-bottom: 1px solid #ccc; */ /* Línea delgada en la parte inferior del contenedor */
 }
 
-/* Estilo para el logo */
-.logo {
-    height: 60px; /* Ajusta la altura a 80px; modifícalo según tus necesidades */
-}
+    /* Estilo para el logo */
+    .logo {
+        height: 60px; /* Ajusta la altura*/
+    }
 
-/* Estilo para el texto del logo */
-.logo-text {
-    font-size: 30px; /* Tamaño de la fuente */
-    font-weight: bold; /* Negrita */
-    color: #2941c9bd; /* Color del texto */
-}
+    /* Estilo para el texto del logo */
+    .logo-text {
+        font-size: 30px; /* Tamaño de la fuente */
+        font-weight: bold; /* Negrita */
+        color: #2941c9bd; /* Color del texto */
+    }
 
 /* Estilo para el menú */
 .menu-2 {
     display: flex; /* Utiliza Flexbox para alinear elementos en línea */
     justify-content: flex-end; /* Alinea los elementos a la derecha */
-    color: #ffffff; /* Color del texto del menú */    padding: 10px; /* Espaciado interno para el menú */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #38b220; /* Color verde agua para el fondo del menú */
+    padding: 10px; /* Espaciado interno para el menú */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
 }
 
-/* Estilo para cada elemento del menú */
-.menu-2 div {
-    margin: 0 20px; /* Espacio entre elementos */
-    color: rgb(255, 255, 255); /* Color del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
-    transition: color 0.3s; /* Transición suave para el color */
-}
-
-    /* Efecto hover para los elementos del menú */
-    .menu-2 div:hover {
-        color: #145c8b; /* Color dorado al pasar el ratón */
+    /* Estilo para cada elemento del menú */
+    .menu-2 div {
+        margin: 0 15px; /* Espacio entre elementos */
+        color: rgb(255, 255, 255); /* Color del texto */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
+        transition: color 0.3s; /* Transición suave para el color */
     }
+
+        /* Efecto hover para los elementos del menú */
+        .menu-2 div:hover {
+            color: #145c8b; /* Color dorado al pasar el ratón */
+            transform: translateY(-1px); /* Mueve el elemento hacia arriba */
+        }
+        /*ajustes de las imagenes del menu*/
+        .logo-menu {
+            height: 20px; /* Ajusta la altura */
+            margin-right: 10px; /* Espacio entre la imagen y el texto */
+        }
+
+        .centrado {
+            display: flex; /* Utiliza flexbox para alinear elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
 
 /*------------------------------------------------------------------------------------------------------*/
 
 /* Contenedor principal del cuerpo */
 .cuerpo {
+    flex: 1; /* Permite que el cuerpo ocupe el espacio disponible */
     display: flex; /* Flexbox para organizar las 3 secciones en fila */
-    justify-content: space-between;
-    padding: 20px;
-    gap: 20px; /* Espaciado horizontal entre los div */
-    margin-top: 20px;
+    gap: 15px; /* Espaciado horizontal entre los div */
+    margin-top: 15px; /* Agrega un margen de 20 píxeles en la parte superior */
 }
 
 /* Estilos para cada sección dentro del cuerpo */
-.perfil-usuario, .barra-lateral {
-    background-color: #ffffff; /* Fondo blanco para secciones */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px;
-    border-radius: 5px;
-    flex-grow: 1; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
-}
-    .perfil-usuario h2 {
-        display: flex; /* Utiliza flexbox para alinear elementos */
-        align-items: center; /* Centra verticalmente los elementos */
+    .perfil-usuario {
+        background-color: #673838; /* color Fondo */
+        color: #000000;/*Color de las letras*/
+        padding: 15px;
+        border-radius: 50px;
+        text-align: center; /*texto centrado*/
+        max-height: 400px; /* Establece una altura máxima para que no llegue hasta abajo */
+
     }
+    .perfil-usuario h2 {
+        margin: 0 10px; /* Elimina el margen por defecto y agrega un poco de espacio horizontal */
+        font-size: 24px; /* Ajusta el tamaño del texto si es necesario */
+    }
+    
+    .perfil-usuario .logo {
+        height: 50px; /* Ajusta la altura del logo del perfil */
+        margin-right: 10px; /* Espacio entre la imagen y el texto */
+    }
+
+            .Nombre-de-Usuario {
+                margin-bottom: 20px; /* Espacio debajo de la información del usuario */
+                padding: 10px; /* Espaciado interno */
+                background-color: #e0dada; /* Fondo gris claro para la información */
+                border-radius: 5px; /* Bordes redondeados */
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+                flex: 0 0 10%; /* Establece que la sección ocupe el 20% */
+            }
+
+
+            /* Estilo para el placeholder */
+            input[type="email"]::placeholder {
+                text-align: center; /* Centra el placeholder */
+                color: #aaa; /* Color del placeholder */
+            }
+
+
 
 .feed-publicaciones{
     background-color: rgba(0, 85, 241, 0.719);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
+    padding: 15px;/*margen lateral*/
+    border-radius: 30px; /*Esquinas redondeadas*/
+    flex-grow: 5; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
+    flex: 0 0 50%; /* Establece que la sección ocupe el 60% */
 }
 
-/* Estilo específico para cada sección */
-.perfil-usuario {
-    flex-basis: 20%; /* Perfil ocupa el 20% del ancho */
-}
 
-.feed-publicaciones {
-    flex-grow: 1; /* Permite que el feed ocupe cualquier espacio extra */
-}
+
+
 
 .barra-lateral {
     flex-basis: 20%; /* Barra lateral ocupa el 20% del ancho */
-}
-
-/* Estilos para los div internos (los 5 divs) */
-.item {
-    background-color: #e3f2fd; /* Azul claro */
+    flex: 0 0 30%; /* Establece que la sección ocupe el 20% */
+    background-color: rgba(0, 85, 241, 0.719);
+    border-radius: 30px; /*Esquinas redondeadas*/
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-    margin-bottom: 10px; /* Añadir margen inferior para separar cada div */
 }
-
-/* Para el último .item, elimina el margen */
-.item:last-child {
-    margin-bottom: 0; /* Elimina el margen en el último item */
-}
-
-/* Efecto hover para los div internos */
-.item:hover {
-    background-color: #90caf9; /* Azul más intenso al pasar el ratón */}
 
 /*----------------------------------------------------------------------------------------*/
 
 /* Estilo para el pie de página */
 .pie-pagina {
+    margin-top: 15px; /* Espacio superior de entre el cuerpo y el pie de página */
     display: flex; /* Utiliza Flexbox para organizar las columnas */
-    justify-content: space-between; /* Espacia las columnas de manera uniforme */
-    padding: 20px; /* Espaciado interno */
+    padding: 10px; /* Espaciado interno */
     background-color: #e3f2fd; /* Azul claro para el pie de página */
     border-top: 2px solid #3a8e3a; /* Línea superior del pie de página */}
 
@@ -159,6 +176,9 @@ html, body {
     .menu-1 {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: center; /* Centra los elementos */
+        position: sticky; /* Hace que la cabecera se mantenga en la parte superior */
+        top: 0; /* Se fija a la parte superior de la ventana */
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
     }
 
     .logo {
@@ -170,11 +190,7 @@ html, body {
         justify-content: center; /* Centra el contenido del menú */
     }
 }
-.menu-1 {
-    position: sticky; /* Hace que la cabecera se mantenga en la parte superior */
-    top: 0; /* Se fija a la parte superior de la ventana */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-}
+
 /*---------------------------------------------------------------------------------------------------------------------*/
 /* Estilos previos para Cuerpo */
 @media (max-width: 768px) {
