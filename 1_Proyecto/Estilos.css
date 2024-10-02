@@ -2,6 +2,7 @@
 html, body {
     height: 100%; /* Establece altura al 100% */
     margin: 0; /* Elimina el margen por defecto */
+    background-color: #f0f4f8; /* Color de fondo del contenedor */
 }
 
 .container {
@@ -9,7 +10,8 @@ html, body {
     flex-direction: column; /* Organiza los hijos en columna */
     min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura de la vista */
 }
-
+/*--------------------------------------------------------------------------*/
+/* Contenedor principal de la Cabezera */
 
 /* Estilo para el contenedor principal */
 .menu-1 {
@@ -17,42 +19,40 @@ html, body {
     justify-content: space-between; /* Espacia los elementos de manera que estén al borde del contenedor */
     align-items: center; /* Alinea verticalmente los elementos al centro */
     padding: 10px; /* Espaciado interno del contenedor */
-    background-color: rgb(173, 181, 174); /* Color de fondo del contenedor */
-    border-bottom: 1px solid #ccc; /* Línea delgada en la parte inferior del contenedor */
+    background-color: #3a8e3a; /* Color de fondo del menú */    /*border-bottom: 1px solid #ccc; */ /* Línea delgada en la parte inferior del contenedor */
 }
 
 /* Estilo para el logo */
 .logo {
-    height: 80px; /* Ajusta la altura a 80px; modifícalo según tus necesidades */
+    height: 60px; /* Ajusta la altura a 80px; modifícalo según tus necesidades */
 }
 
 /* Estilo para el texto del logo */
 .logo-text {
     font-size: 30px; /* Tamaño de la fuente */
     font-weight: bold; /* Negrita */
-    color: #f9f6f6; /* Color del texto */
+    color: #2941c9bd; /* Color del texto */
 }
 
 /* Estilo para el menú */
 .menu-2 {
     display: flex; /* Utiliza Flexbox para alinear elementos en línea */
     justify-content: flex-end; /* Alinea los elementos a la derecha */
-    background-color: #38b220; /* Color verde agua para el fondo del menú */
-    padding: 10px; /* Espaciado interno para el menú */
+    color: #ffffff; /* Color del texto del menú */    padding: 10px; /* Espaciado interno para el menú */
     border-radius: 5px; /* Bordes redondeados */
 }
 
 /* Estilo para cada elemento del menú */
 .menu-2 div {
     margin: 0 20px; /* Espacio entre elementos */
-    color: white; /* Color del texto */
+    color: rgb(255, 255, 255); /* Color del texto */
     cursor: pointer; /* Cambia el cursor al pasar sobre el elemento */
     transition: color 0.3s; /* Transición suave para el color */
 }
 
     /* Efecto hover para los elementos del menú */
     .menu-2 div:hover {
-        color: #FFD700; /* Color dorado al pasar el ratón */
+        color: #145c8b; /* Color dorado al pasar el ratón */
     }
 
 /*------------------------------------------------------------------------------------------------------*/
@@ -67,8 +67,20 @@ html, body {
 }
 
 /* Estilos para cada sección dentro del cuerpo */
-.perfil-usuario, .feed-publicaciones, .barra-lateral {
-    background-color: rgb(133, 35, 35);
+.perfil-usuario, .barra-lateral {
+    background-color: #ffffff; /* Fondo blanco para secciones */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    border-radius: 5px;
+    flex-grow: 1; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
+}
+    .perfil-usuario h2 {
+        display: flex; /* Utiliza flexbox para alinear elementos */
+        align-items: center; /* Centra verticalmente los elementos */
+    }
+
+.feed-publicaciones{
+    background-color: rgba(0, 85, 241, 0.719);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -90,7 +102,7 @@ html, body {
 
 /* Estilos para los div internos (los 5 divs) */
 .item {
-    background-color: #eaeaea;
+    background-color: #e3f2fd; /* Azul claro */
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -105,8 +117,7 @@ html, body {
 
 /* Efecto hover para los div internos */
 .item:hover {
-    background-color: #50a482;
-}
+    background-color: #90caf9; /* Azul más intenso al pasar el ratón */}
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -115,9 +126,8 @@ html, body {
     display: flex; /* Utiliza Flexbox para organizar las columnas */
     justify-content: space-between; /* Espacia las columnas de manera uniforme */
     padding: 20px; /* Espaciado interno */
-    background-color: rgb(205, 255, 208); /* Color de fondo */
-    border-top: 1px solid #ccc; /* Línea superior del pie de página */
-}
+    background-color: #e3f2fd; /* Azul claro para el pie de página */
+    border-top: 2px solid #3a8e3a; /* Línea superior del pie de página */}
 
 /* Estilo para cada columna */
 .columna {
@@ -130,13 +140,13 @@ html, body {
     font-size: 17px; /* Tamaño de fuente */
     font-weight: bold; /* Estilo de fuente negrita */
     text-align: center; /*Se alinea en el centro*/
+    color: #3a8e3a; /* Color de texto en encabezados de columnas */
 }
 
 /* Estilo para el texto en las columnas */
 .columna p {
     font-size: 14px; /* Tamaño de fuente */
-    color: #555; /* Color del texto */
-    text-align: center; /*Se alinea en el centro*/
+    color: #555; /* Color de texto en párrafos */    text-align: center; /*Se alinea en el centro*/
 }
 
 /*------------------------------------------------------------------------------------------------------------------*/
@@ -207,3 +217,6 @@ html, body {
         margin: 10px; /* Margen entre columnas */
     }  
 }
+/*-------------------------*/
+
+/* General styles */
