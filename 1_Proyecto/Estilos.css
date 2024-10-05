@@ -1,8 +1,8 @@
 /* General styles */
 html, body {
     height: 100%; /* Establece altura al 100% */
-
-    background-color: #f0f4f8; /* Color de fondo del contenedor */
+    background-image: url('/1_Proyecto/Imagenes/fondo.jpg'); /* Fondo de imagen */
+    /*background-color: #f0f4f8; /* Color de fondo del contenedor */
 }
 
 .Contenedor {
@@ -19,8 +19,9 @@ html, body {
     justify-content: space-between; /* Espacia los elementos de manera que estén al borde del contenedor */
     align-items: center; /* Alinea verticalmente los elementos al centro */
     padding: 10px; /* Espaciado interno del contenedor */
-    background-color: #3a8e3a; /* Color de fondo del menú */    /*border-bottom: 1px solid #ccc; */ /* Línea delgada en la parte inferior del contenedor */
+    background-color: #783434; /* Color de fondo del menú */    /*border-bottom: 1px solid #ccc; */ /* Línea delgada en la parte inferior del contenedor */
 }
+
 
     /* Estilo para el logo */
     .logo {
@@ -31,7 +32,7 @@ html, body {
     .logo-text {
         font-size: 30px; /* Tamaño de la fuente */
         font-weight: bold; /* Negrita */
-        color: #2941c9bd; /* Color del texto */
+        color: #000000bd; /* Color del texto */
     }
 
 /* Estilo para el menú */
@@ -82,10 +83,12 @@ html, body {
     .perfil-usuario {
         background-color: #673838; /* color Fondo */
         color: #000000;/*Color de las letras*/
-        padding: 15px;
-        border-radius: 50px;
+        padding: 15px;/*Margen interior*/
+        border-radius: 50px; /*Esquinas redondeadas*/
         text-align: center; /*texto centrado*/
-        max-height: 400px; /* Establece una altura máxima para que no llegue hasta abajo */
+        max-height: 500px; /* Establece una altura máxima para que no llegue hasta abajo */
+        flex: 0 0 10%; /* Establece que la sección ocupe el 60% */
+        margin-left: 20px;
 
     }
     .perfil-usuario h2 {
@@ -94,8 +97,7 @@ html, body {
     }
     
     .perfil-usuario .logo {
-        height: 50px; /* Ajusta la altura del logo del perfil */
-        margin-right: 10px; /* Espacio entre la imagen y el texto */
+        height: 60px; /* Ajustar lo grande logo del perfil */
     }
 
             .Nombre-de-Usuario {
@@ -108,33 +110,111 @@ html, body {
             }
 
 
-            /* Estilo para el placeholder */
-            input[type="email"]::placeholder {
-                text-align: center; /* Centra el placeholder */
-                color: #aaa; /* Color del placeholder */
-            }
+                /* Estilo para el placeholder */
+                input[type="escribir"]::placeholder { /*type solo selecciona los que sean escribir*/
+                    text-align: center; /* Centra el placeholder */
+                    color: #aaa; /* Color del placeholder */
+                }
 
 
 
-.feed-publicaciones{
-    background-color: rgba(0, 85, 241, 0.719);
+.publicaciones{
+    background-color: rgb(84, 30, 30);
     padding: 15px;/*margen lateral*/
     border-radius: 30px; /*Esquinas redondeadas*/
     flex-grow: 5; /* Los div se ajustarán automáticamente a su contenido y espacio disponible */
     flex: 0 0 50%; /* Establece que la sección ocupe el 60% */
 }
 
+    .publicaciones .publicacion {
+    background-color: #ffffff; /* Fondo blanco para cada publicación */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre publicaciones */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    }
+
+    .publicacion h2 {
+        font-size: 22px; /* Tamaño del título de cada publicación */
+        color: #333; /* Color del texto del título */
+        margin-bottom: 10px; /* Espacio debajo del título */
+        text-align: center; /*texto centrado*/
+    }
+
+    .publicacion img {
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-bottom: 10px; /* Espacio debajo de la imagen */
+    }
+
+    .publicacion p {
+        font-size: 16px; /* Tamaño del texto debajo de la imagen */
+        color: #555; /* Color del texto */
+    }
 
 
-
-
+/* Estilo para la barra lateral */
 .barra-lateral {
-    flex-basis: 20%; /* Barra lateral ocupa el 20% del ancho */
-    flex: 0 0 30%; /* Establece que la sección ocupe el 20% */
-    background-color: rgba(0, 85, 241, 0.719);
-    border-radius: 30px; /*Esquinas redondeadas*/
-    padding: 15px;
+    flex: 1; /* Ocupa una parte igual del espacio */
+    padding: 15px; /* Espaciado interno */
+    background-color: #4a2323; /* Color de fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-right: 20px; /* Espacio a la derecha */
 }
+
+/* Estilo para la sección de tendencias y sugerencias */
+.tendencias-sugerencias {
+    display: flex; /* Utiliza Flexbox para organizar las tarjetas */
+    flex-direction: column; /* Coloca las tarjetas en columna */
+    gap: 15px; /* Espacio entre las tarjetas */
+    margin-top: 15px; /* Espacio en la parte superior */
+}
+
+/* Estilo para cada tarjeta */
+.tarjeta {
+    display: flex; /* Utiliza Flexbox para alinear imagen y texto */
+    background-color: #ffffff; /* Color de fondo blanco para las tarjetas */
+    border: 1px solid #ddd; /* Borde delgado */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: transform 0.3s; /* Transición suave para hover */
+}
+
+/* Efecto hover para las tarjetas */
+.tarjeta:hover {
+    transform: translateY(-2px); /* Eleva la tarjeta ligeramente al pasar el cursor */
+}
+
+/* Estilo para las imágenes en las tarjetas */
+.imagen-tarjeta {
+    width: 40px; /* Ajusta el tamaño de la imagen */
+    height: 40px; /* Ajusta el tamaño de la imagen */
+    margin-right: 15px; /* Espacio entre la imagen y el texto */
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+}
+
+/* Estilo para el texto dentro de las tarjetas */
+.texto-tarjeta {
+    display: flex; /* Utiliza Flexbox para alinear el texto */
+    flex-direction: column; /* Coloca el texto en columna */
+}
+
+/* Estilo para los títulos de las tarjetas */
+.texto-tarjeta h3 {
+    margin: 0; /* Elimina el margen por defecto */
+    font-size: 16px; /* Tamaño de fuente para el título */
+    color: #3a8e3a; /* Color del texto del título */
+}
+
+/* Estilo para los párrafos dentro de las tarjetas */
+.texto-tarjeta p {
+    margin-top: 5px; /* Añade un margen superior */
+    font-size: 14px; /* Tamaño de fuente para el texto */
+    color: #555; /* Color del texto */
+}
+
 
 /*----------------------------------------------------------------------------------------*/
 
@@ -163,8 +243,32 @@ html, body {
 /* Estilo para el texto en las columnas */
 .columna p {
     font-size: 14px; /* Tamaño de fuente */
-    color: #555; /* Color de texto en párrafos */    text-align: center; /*Se alinea en el centro*/
+    color: #555; /* Color de texto en párrafos */    
+    text-align: center; /* Alinea el texto al centro */
+    margin: 10px 0; /* Añade margen superior e inferior */
 }
+
+    /* Estilo para el contenedor de redes sociales */
+    .redes-sociales {
+        display: flex; /* Usa flexbox para alinear las imágenes */
+        justify-content: center; /* Centra las imágenes horizontalmente */
+        gap: 15px; /* Espacio entre las imágenes */
+        margin-top: 20px; /* Añade un margen superior entre el texto y las imágenes */
+    }
+
+    /* Estilo para las imágenes de las redes sociales */
+    .redes-sociales img {
+        width: 30px; /* Ancho fijo para las imágenes */
+        height: 30px; /* Alto fijo para las imágenes */
+        transition: transform 0.3s ease; /* Efecto suave en hover */
+    }
+
+    /* Efecto hover para las imágenes */
+    .redes-sociales img:hover {
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño cuando el cursor pasa por encima */
+    }
+
+
 
 /*------------------------------------------------------------------------------------------------------------------*/
 
@@ -194,29 +298,29 @@ html, body {
 /*---------------------------------------------------------------------------------------------------------------------*/
 /* Estilos previos para Cuerpo */
 @media (max-width: 768px) {
-    
 
     .cuerpo {
         flex-direction: column; /* Cambia la dirección del flex a columna */
         align-items: stretch; /* Asegura que los hijos ocupen todo el ancho */
     }
 
-    .perfil-usuario, .feed-publicaciones, .barra-lateral {
+    .perfil-usuario, .publicaciones, .barra-lateral {
         flex-basis: auto; /* Elimina los tamaños fijos para que se ajusten automáticamente */
         width: 100%; /* Asegura que ocupen todo el ancho */
     }
 
-    .perfil-usuario {
-        order: 1; /* Asegura que el perfil esté primero */
-    }
+        .perfil-usuario {
+            order: 1; /* Asegura que el perfil esté primero */
+            margin-left: 0; /* Elimina el margen izquierdo en pantallas de 768px o menos */
+        }
 
-    .feed-publicaciones {
-        order: 2; /* Asegura que el feed esté en el medio */
-    }
+        .publicaciones {
+            order: 2; /* Asegura que el feed esté en el medio */
+        }
 
-    .barra-lateral {
-        order: 3; /* Asegura que la barra lateral esté al final */
-    }
+        .barra-lateral {
+            order: 3; /* Asegura que la barra lateral esté al final */
+        }
 
 }
 /*----------------------------------------------------------------------------*/
