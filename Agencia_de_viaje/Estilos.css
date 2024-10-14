@@ -1,0 +1,115 @@
+/* Ajustes para el cuerpo del documento */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Asegurar que el contenido llene el espacio restante */
+.cuerpo {
+    flex: 1;
+    background-color: #e5f8e5; /* Color verde suave */
+    padding: 20px;
+}
+
+/* Estilos para la cabecera */
+.cabecera {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Apila los divs en columna */
+}
+
+/* Estilos para la parte blanca de la cabecera */
+.cabecera-blanca {
+    background-color: white; /* Blanco */
+    color: black; /* Texto negro */
+    left: 20px;
+    padding: 40px; /* Aumentar el padding para más altura */
+    font-size: 24px;
+    position: relative; /* Para permitir el uso de posicionamiento en el logo */
+}
+
+    /* Estilos para el logo */
+    .logo {
+        position: absolute;
+        top: 20px; /* Ajustado para que esté parcialmente en la cabecera azul */
+        left: 10px; /* Coloca el logo a la izquierda */
+        width: 110px; /* Ajusta el tamaño del logo */
+    }
+    /* Estilos para el título */
+    .titulo {
+        border-left-style: solid;
+        border-left-width: 0px;
+        margin-left: 100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0;
+        text-align: left; /* Centrar el texto */
+        font-size: 20px; /* Ajustar tamaño de fuente a un valor más pequeño */
+
+    }
+
+
+/* Estilos para la parte azul de la cabecera */
+.cabecera-azul {
+    background-color: #82b1e7; /* Azul del cielo */
+    color: white; /* Texto blanco */
+    text-align: left; /* Alinear el texto a la izquierda */
+    padding: 10px; /* Altura más fina */
+    font-size: 18px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilos para la navegación */
+.navegacion {
+    display: inline-block; /* Para que se ajuste al contenido */
+    margin-left: 120px; /* Ajusta este valor para graduar la navegación hacia la izquierda */
+}
+
+.navegacion ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Asegura que no haya márgenes */
+}
+
+.navegacion li {
+    display: inline; /* Mostrar los elementos en línea */
+    margin: 0 20px; /* Espaciado entre los elementos */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: white; /* Cambiado a blanco para contrastar con el fondo azul */
+    font-weight: normal; /* Peso de fuente normal para un tamaño más pequeño */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+.navegacion .icono {
+    width: 25px; /* Aumentar el tamaño de la imagen a 25px */
+    height: 25px; /* Mantiene la proporción */
+    vertical-align: middle; /* Alinea la imagen con el texto */
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+    display: inline-block; /* Asegura que el icono se alinee correctamente */
+}
+
+/* Estilos para el cuerpo */
+.carrousel, .guias-lugares, .quienes-somos, .sitios-populares {
+    background-color: #c2f9c2; /* Color verde claro */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el pie de página */
+.pie-de-pagina {
+    width: 100%;
+    height: auto; /* Permite que la altura sea flexible */
+    background-color: #8B4513; /* Marrón tierra */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: relative;
+}
