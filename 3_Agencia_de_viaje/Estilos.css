@@ -8,16 +8,24 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column; /* Apila los divs en columna */
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+    background-position: center; /* Centra la imagen */
 }
+
 
 /* Estilos para la parte blanca de la cabecera */
 .cabecera-blanca {
-    background-color: white; /* Blanco */
+    background-color: rgb(247, 249, 249);
+    background-size: cover; /* Asegura que la imagen cubra todo el espacio */
     color: black; /* Texto negro */
     font-size: 24px;
     display: flex; /* Usamos Flexbox */
     justify-content: space-between; /* Alineamos los elementos a los lados opuestos */
     align-items: center; /* Centramos los elementos verticalmente */
+    
+    padding-bottom: 10px;
+    padding-top: 10px;
+
 }
 
     /* Agrupamos el logo y el título */
@@ -29,24 +37,35 @@ body {
 
     /* Estilos para el logo */
     .logo {
-        width: 110px; /* Ajusta el tamaño del logo */
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 100px; /* Ajusta el tamaño del logo */
+        position: absolute;
+        z-index: 1; /* Asegura que el logo se mantenga visible sobre el div azul */
+        top: 10px;
+        left: 20px;
+
     }
 
     /* Estilos para el título */
     .titulo {
-        margin: 0; /* Eliminamos márgenes innecesarios */
-        font-size: 24px; /* Ajustar tamaño de fuente */
+        margin-left: 150px;
+        font-size: 35px; /* Ajustar tamaño de fuente */
         text-align: left; /* Alineamos el texto a la izquierda */
+        margin-bottom: 0px;
+        margin-top: 0px;
+
     }
 
 
     /* Estilos para el div de información */
     .div-informacion {
-        background-color: rgba(119, 119, 119, 0.925); /* Color verde */
+        background-color: rgb(153, 153, 153); /* Color verde */
         font-size: 15px; /* Tamaño de fuente más pequeño */
         border-radius: 15px; /* Radio de los bordes */
         padding: 10px;
         margin-top: 0px;
+        margin-right: 10px;
 
     }
 
@@ -55,7 +74,8 @@ body {
     }
 
      .div-informacion .icono{
-        font-size: 20px;
+        font-size: 10px;
+        color:rgba(179, 28, 28, 0.5)
      }
 
        
@@ -64,7 +84,7 @@ body {
 
 /* Estilos para la parte azul de la cabecera */
 .cabecera-azul {
-    background-color: #82b1e7; /* Azul del cielo */
+    background-color: #418ee18c; /* Azul del cielo */
     color: white; /* Texto blanco */
     text-align: left; /* Alinear el texto a la izquierda */
     padding: 10px; /* Altura más fina */
@@ -103,6 +123,8 @@ body {
     display: inline-block; /* Asegura que el icono se alinee correctamente */
 }
 
+
+
 /* Asegurar que el contenido llene el espacio restante */
 .cuerpo {
     flex: 1;
@@ -110,14 +132,84 @@ body {
     padding: 20px;
 }
 
-/* Estilos para el cuerpo */
-.carrousel, .guias-lugares, .quienes-somos, .sitios-populares {
-    background-color: #c2f9c2; /* Color verde claro */
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Estilos para el contenedor del carrusel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
 }
+
+    /* Ocultar los inputs de tipo radio */
+    .carousel input[type="radio"] {
+        display: none;
+    }
+
+    /* Contenedor de las imágenes */
+    .carousel-images {
+        display: flex;
+        position: relative;
+        width: 300%; /* 100% por cada imagen */
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* Estilos para cada slide (imagen) */
+    .carousel-images .slide {
+        width: 100%;
+        flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Mostrar la imagen correspondiente cuando el input está marcado */
+    #slide1:checked ~ .carousel-images #image1 {
+        opacity: 1;
+        position: relative;
+    }
+    #slide2:checked ~ .carousel-images #image2 {
+        opacity: 1;
+        position: relative;
+    }
+    #slide3:checked ~ .carousel-images #image3 {
+        opacity: 1;
+        position: relative;
+    }
+
+    /* Botones de navegación */
+    .carousel-navigation {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+
+    .carousel-navigation label {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 50%;
+        user-select: none;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-navigation label:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+
+
+
+
+
+
+
 
 /* Estilos para el pie de página */
 .pie-de-pagina {

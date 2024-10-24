@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box; /* Establece el box-sizing para que el padding y el borde no aumenten el tamaño total */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal para el cuerpo */
+}
+
+.contenedor {
+    display: grid; /* Establece el contenedor como un grid */
+    grid-template-rows: auto 1fr auto; /* Define las filas para la cabecera, cuerpo y pie de página */
+    height: 100vh; /* Altura del contenedor ocupa toda la ventana del navegador */
+}
+
+    .cabecera {
+        display: flex; /* Utiliza flexbox para la disposición de la cabecera */
+        flex-direction: column; /* Orientación vertical */
+        background-color: #d8d8d8; /* Color de fondo de la cabecera */
+        position: sticky; /* Mantiene la cabecera fija al hacer scroll */
+        top: 0; /* Se mantendrá en la parte superior */
+        z-index: 1000; /* Asegura que la cabecera esté por encima del contenido */
+    }
+
+        .sub-cabecera1 {
+            display: flex; /* Utiliza flexbox para la disposición de los elementos en la sub-cabecera */
+            justify-content: space-between; /* Espaciado entre los elementos */
+            align-items: center; /* Alineación vertical centrada */
+            padding: 10px; /* Espaciado interno */
+        }
+
+            .logo img {
+                height: 100px; /* Altura del logo */
+            }
+
+            .titulo h1 {
+                font-size: 40px; /* Tamaño de la fuente del título */
+                font-family: 'Cinzel', serif; /* Fuente personalizada */
+            }
+
+        .info {
+            background-color: #0b4f0d78; /* Color de fondo para la información */
+            padding: 15px 10px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        .sub-cabecera2 {
+            position: relative; /* Posicionamiento relativo para el menú desplegable */
+            background-color: rgba(64, 143, 177, 0.419); /* Color de fondo con transparencia */
+            padding: 10px; /* Espaciado interno */
+        }
+
+    .navegacion {
+        list-style-type: none; /* Elimina viñetas de la lista */
+        display: flex; /* Utiliza flexbox para la disposición de los enlaces */
+        justify-content: space-around; /* Espaciado igual entre los elementos */
+        cursor: pointer; /* Cambia el cursor al pasar sobre los elementos */
+    }
+
+    .navegacion li:hover {
+        background-color: rgba(0, 0, 0, 0.1); /* Efecto hover */
+    }
+
+   .dropdown {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute; /* Posicionamiento absoluto para el menú desplegable */
+    right: 100px; /* Alinea el menú al lado izquierdo */
+    width: 20%; /* Ancho del menú es 100% */
+    background-color: white; /* Color de fondo del menú */
+    border: 1px solid black; /* Borde negro */
+    border-radius: 8px; /* Bordes redondeados para el menú */
+    padding: 15px; /* Espaciado interno */
+    z-index: 1000; /* Asegura que el menú esté en la parte superior */
+}
+
+    /* Muestra el dropdown al pasar el ratón sobre el usuario */
+    .navegacion li.usuario:hover .dropdown {
+        display: block; /* Muestra el menú al pasar el ratón */
+    }
+
+    .dropdown label {
+        display: block; /* Cada etiqueta ocupa una línea completa */
+        margin-top: 10px; /* Margen superior */
+    }
+
+    .dropdown input {
+        width: 100%; /* Ancho completo */
+        padding: 8px; /* Espaciado interno */
+        margin-bottom: 10px; /* Margen inferior */
+        border: 1px solid #ccc; /* Borde gris claro */
+        border-radius: 4px; /* Bordes redondeados */
+    }
+
+    .dropdown button {
+        width: 100%; /* Ancho completo */
+        padding: 8px; /* Espaciado interno */
+        background-color: #247e24; /* Color más oscuro */
+        color: white; /* Color del texto del botón */
+        border: none; /* Sin borde */
+        border-radius: 4px; /* Bordes redondeados */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    }
+
+    .dropdown button:hover {
+        background-color: #0a3b0a; /* Color más oscuro */
+        transform: scale(1.05); /* Leve aumento al pasar el cursor */
+    }
+
+    .registro {
+        margin-top: 10px; /* Margen superior para el enlace de registro */
+        font-size: 14px; /* Tamaño de fuente para el texto del registro */
+    }
+
+    .registro a {
+        color: #007bff; /* Color del enlace */
+        text-decoration: none; /* Sin subrayado */
+    }
+
+    .registro a:hover {
+        text-decoration: underline; /* Subrayado al pasar el cursor */
+    }
+
+.cuerpo {
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+.cuerpo h2 {
+    margin: 50px 0 50px 0; /* Margen alrededor del título */
+    padding: 10px;
+    text-align: left;
+    border-left: 2px solid black;
+}
+
+.titulo-busqueda {
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    justify-content: space-between; /* H2 a la izquierda y barra de búsqueda a la derecha */
+    align-items: center; /* Alinea verticalmente ambos elementos */
+    margin: 30px 0; /* Margen arriba y abajo de 30px, 0 a los lados */
+}
+
+
+.titulo-busqueda h2 {
+    margin: 0; /* Elimina el margen por defecto del h2 */
+}
+
+.barra-busqueda {
+    display: flex; /* Mantiene la barra de búsqueda y el botón alineados */
+    gap: 5px; /* Espaciado entre el input y el botón */
+}
+
+.barra-busqueda input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barra-busqueda button {
+    padding: 8px;
+    background-color: #247e24;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+
+
+.destinos {
+    display: flex; /* Usar flexbox para alinear los destinos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px; /* Espaciado entre los destinos */
+
+}
+
+.destino {
+    background-color: white; /* Fondo blanco para cada destino */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    padding: 10px; /* Espaciado interno */
+    width: 450px; /* Ancho fijo para cada destino */
+    text-align: left; /* Alinear el texto a la izquierda */
+    transition: transform 0.3s ease; /* Transición suave para el aumento */
+}
+
+/* Efecto de aumento al pasar el ratón */
+.destino:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+
+
+.destino img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 300px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.destino h3 {
+    margin: 10px 5px 5px 0; /* Margen alrededor del título */
+}
+
+.destino p {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #555; /* Color gris para la descripción */
+    text-align: justify;
+}
+
+.guia {
+    background-color: white; /* Fondo blanco para cada guía */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    padding: 10px; /* Espaciado interno */
+    width: 200px; /* Ancho fijo para cada guía */
+    text-align: center; /* Alinear el texto y las imágenes al centro */
+    transition: transform 0.3s ease; /* Transición suave para el aumento */
+}
+
+/* Efecto de aumento al pasar el ratón */
+.guia:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+
+.guia h2{
+    text-align: left;
+}
+
+.guias-lista {
+    display: flex; /* Aplica flexbox */
+    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+    flex-wrap: wrap; /* Permite que los guías bajen a otra fila si no hay espacio */
+    padding: 20px; /* Añade padding al contenedor */
+}
+
+
+
+.guia img {
+    width: 150px; /* Imagen ocupa todo el ancho del contenedor */
+    height: 200px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    margin: 0 auto; /* Márgenes automáticos para centrar la imagen */
+}
+
+.guia h3 {
+    margin: 10px 0 5px 0; /* Margen alrededor del nombre */
+}
+
+.guia p {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #555; /* Color gris para la descripción */
+    text-align: justify;
+}
+
+.mapa-container {
+    text-align: center; /* Centra el contenido del mapa */
+    margin: 30px 0; /* Espaciado arriba y abajo */
+}
+
+.mapa {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    max-width: 800px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+
+
+
+
+
+.pie-de-pagina {
+    border: 2px solid black; /* Borde negro alrededor del pie de página */
+    background-color: #d4d4d4; /* Color de fondo del pie de página */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación de texto centrada */
+}
+
+
+@media (max-width: 768px) {
+    .destino, .guia {
+        width: 100%; /* Cambia el ancho a 100% en pantallas más pequeñas */
+        margin: 0; /* Elimina el margen */
+    }
+    
+    .navegacion {
+        flex-direction: column; /* Cambia la dirección a columna para la navegación en pantallas pequeñas */
+    }
+}

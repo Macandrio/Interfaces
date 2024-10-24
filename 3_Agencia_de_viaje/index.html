@@ -16,18 +16,18 @@
                 <!-- Logo -->
                 <img src="Imagenes/Logo.png" alt="Logo" class="logo">
                  <!-- Título -->
-                <h1 class="titulo">Tierra Media</h1>
+                <h1 class="titulo">Magic World</h1>
             </div>
 
              <!-- Div a la derecha -->
             <div class="div-informacion">
                 <p>
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <i class="icono fa-brands fa-whatsapp"></i>
                     630334651/+92 354867125
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <i class="fa-solid fa-envelope-circle-check"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="icono fa-solid fa-mobile-screen-button"></i>
+                    <i class="icono fa-solid fa-envelope-circle-check"></i>
+                    <i class="icono fa-brands fa-instagram"></i>
+                    <i class="icono fa-brands fa-square-facebook"></i>
                 </p>
                 <p>info.viajes@gmail.com / tierra.media.viajes@gmail.com</p>
                 
@@ -52,21 +52,40 @@
                     </li>
                 </ul>
             </nav>
+
         </div>
     </div>
-    
+<!------------------------------------------  Cuerpo  ------------------------------------------------------------------------>>    
     <div class="cuerpo">
-        <div class="carrousel">Carrousel de imágenes</div>
-        <div class="guias-lugares">
-            <h2>Guías & Lugares</h2>
-            <div class="fotos-lugares">Fotos de los lugares</div>
-        </div>
-        <div class="quienes-somos">
-            <h2>¿Quiénes somos?</h2>
-        </div>
-        <div class="sitios-populares">
-            <h2>Sitios más populares</h2>
-        </div>
+        <section class="carrousel">
+            <div class="carousel">
+                <!-- Inputs de tipo radio para controlar las imágenes -->
+                <input type="radio" name="slides" id="slide1" checked>
+                <input type="radio" name="slides" id="slide2">
+                <input type="radio" name="slides" id="slide3">
+        
+                <!-- Contenedor de las imágenes -->
+                <div class="carousel-images">
+                    <div class="slide" id="image1">
+                        <img src="Imagenes/llano.webp" alt="Imagen 1">
+                    </div>
+                    <div class="slide" id="image2">
+                        <img src="Imagenes/imagen2.jpg" alt="Imagen 2">
+                    </div>
+                    <div class="slide" id="image3">
+                        <img src="Imagenes/imagen3.jpg" alt="Imagen 3">
+                    </div>
+                </div>
+        
+                <!-- Botones para navegar entre las imágenes -->
+                <div class="carousel-navigation">
+                    <label for="slide1" class="prev">&#10094;</label>
+                    <label for="slide2" class="next">&#10095;</label>
+                </div>
+            </div>
+        </section>
+        
+        
     </div>
     
     <div class="pie-de-pagina">
