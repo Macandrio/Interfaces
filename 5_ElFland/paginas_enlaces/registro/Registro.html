@@ -3,10 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylosregistros.css"> <!-- Enlace al CSS -->
-    <title>Registro</title>
+    <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Cinzel -->
+    <title>Proyecto Grid</title>
+    <link rel="stylesheet" href="/5_ElFland/paginas_enlaces/registro/stylosregistros.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="/5_ElFland/css/Cabecera.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
+
+    <!-- Contenedor Cabecera -->
+    <div class="cabecera">
+
+        <!-- Logo -->
+        <div class="logo">
+                <img src="/5_ElFland/Imagenes/file.png" alt="Logo de la Agencia ElFland" />
+        </div> <!-- Fin Logo -->
+
+        <!-- Titulo -->
+        <div class="titulo">
+            <h1>Agencia de viajes ElFland</h1>
+        </div> <!-- Fin Titulo -->
+
+
+        <!-- Navegacion -->
+        <nav>
+            <ul class="navegacion">
+                <a href="/5_ElFland/index.html">
+                    <li><i class="fa-solid fa-house"></i> Inicio</li>
+                </a>
+                <a href="/5_ElFland/paginas_enlaces/pagina_tienda-blog/pagina.html">
+                    <li><i class="fa-solid fa-plane-departure"></i> Destino</li>
+                </a>
+                <a href="/5_ElFland/index.html">
+                    <li><i class="fa-solid fa-comment"></i> Blog</li>
+                </a>
+                <a href="/5_ElFland/index.html">
+                    <li><i class="fa-solid fa-cart-shopping"></i> Tienda</li>
+                </a>               
+                
+                <li class="usuario"><i class="fa-solid fa-user"></i>Usuario
+                    <div class="dropdown">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Introduce tu email" />
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" placeholder="Introduce tu contraseña" />
+                        <button>Iniciar Sesión</button>
+                        <p class="registro">¿No tienes cuenta? <a href="paginas_enlaces/registro/Registro.html">Regístrate aquí</a></p>
+                    </div>
+                </li>
+            </ul>
+        </nav> <!-- Fin Navegacion -->
+    </div>  <!-- >Fin Cabecera -->
+
     <div class="registro-contenedor">
         <h2>Registro</h2>
         <form action="#" method="post"> <!-- Cambia el action a la URL de tu servidor si es necesario -->
@@ -21,7 +69,7 @@
 
             <button type="submit">Registrarse</button>
         </form>
-        <p class="mensaje">¿Ya tienes una cuenta? <a href="pagina_principal.html">Inicia sesión aquí</a></p>
+        <p class="mensaje">¿Ya tienes una cuenta? <a href="/5_ElFland/index.html">Inicia sesión aquí</a></p>
     </div>
 </body>
 </html>
