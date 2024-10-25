@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box; /* Establece el box-sizing para que el padding y el borde no aumenten el tamaño total */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal para el cuerpo */
+}
+
+.contenedor {
+    display: grid; /* Establece el contenedor como un grid */
+    grid-template-rows: auto 1fr auto; /* Define las filas para la cabecera, cuerpo y pie de página */
+    height: 100vh; /* Altura del contenedor ocupa toda la ventana del navegador */
+    padding-top: 70px; /* Ajusta el padding superior para que no cubra el contenido */
+}
+
+@media (max-width: 768px) {
+    .destino, .guia {
+        width: 100%; /* Cambia el ancho a 100% en pantallas más pequeñas */
+        margin: 0; /* Elimina el margen */
+    }
+    
+    .navegacion {
+        flex-direction: column; /* Cambia la dirección a columna para la navegación en pantallas pequeñas */
+    }
+}

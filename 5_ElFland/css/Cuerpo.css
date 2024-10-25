@@ -1,0 +1,242 @@
+.cuerpo {
+    background-color: #e2e2e2;
+    padding: 20px;
+}
+
+.cuerpo h2 {
+    margin: 50px 0 50px 0; /* Margen alrededor del título */
+    padding: 10px;
+    text-align: left;
+    border-left: 2px solid black;
+}
+
+.titulo-busqueda {
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    justify-content: space-between; /* H2 a la izquierda y barra de búsqueda a la derecha */
+    align-items: center; /* Alinea verticalmente ambos elementos */
+    margin: 30px 0; /* Margen arriba y abajo de 30px, 0 a los lados */
+}
+
+
+.titulo-busqueda h2 {
+    margin: 0; /* Elimina el margen por defecto del h2 */
+}
+
+.barra-busqueda {
+    display: flex; /* Mantiene la barra de búsqueda y el botón alineados */
+    gap: 10px; /* Espaciado entre el input y el botón */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.barra-busqueda input {
+    padding: 10px; /* Espaciado interno más amplio */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 20px; /* Bordes redondeados */
+    width: 250px; /* Ancho fijo */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+}
+
+.barra-busqueda input:focus {
+    outline: none; /* Elimina el contorno por defecto */
+    border-color: #247e24; /* Cambia el color del borde al enfocar */
+    box-shadow: 0 0 5px rgba(36, 126, 36, 0.5); /* Sombra ligera al enfocar */
+}
+
+.barra-busqueda button {
+    padding: 10px 15px; /* Espaciado interno más amplio */
+    background-color: #247e24; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.barra-busqueda button:hover {
+    background-color: #0a3b0a; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Leve aumento al pasar el cursor */
+}
+
+
+
+
+
+
+.destinos {
+    display: flex; /* Usar flexbox para alinear los destinos */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px; /* Espaciado entre los destinos */
+
+}
+
+.destino {
+    background-color: white; /* Fondo blanco para cada destino */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    padding: 10px; /* Espaciado interno */
+    width: 450px; /* Ancho fijo para cada destino */
+    text-align: left; /* Alinear el texto a la izquierda */
+    transition: transform 0.3s ease; /* Transición suave para el aumento */
+}
+
+/* Efecto de aumento al pasar el ratón */
+.destino:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+
+
+.destino img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 300px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+}
+
+.destino h3 {
+    margin: 10px 5px 5px 0; /* Margen alrededor del título */
+}
+
+.destino p {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #555; /* Color gris para la descripción */
+    text-align: justify;
+}
+
+.guias-contenedor {
+    background-color: #a2bf84; /* Cambia el color según tus preferencias */
+    padding: 20px; /* Espacio interno alrededor de las guías */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    margin: 20px;
+}
+
+/* Estilos adicionales para las guías */
+.guias-lista {
+    display: flex; /* Flexbox para disposición en fila */
+    gap: 20px; /* Espacio entre las guías */
+    flex-wrap: wrap; /* Permite que las guías se ajusten en varias líneas si es necesario */
+}
+
+.guia {
+    background-color: white; /* Fondo blanco para cada guía */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    padding: 10px; /* Espaciado interno */
+    width: 200px; /* Ancho fijo para cada guía */
+    text-align: center; /* Alinear el texto y las imágenes al centro */
+    transition: transform 0.3s ease; /* Transición suave para el aumento */
+}
+
+
+
+/* Efecto de aumento al pasar el ratón */
+.guia:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+
+.guia h2{
+    text-align: left;
+}
+
+.guias-lista {
+    display: flex; /* Aplica flexbox */
+    justify-content: space-around; /* Distribuye los elementos con espacio entre ellos */
+    flex-wrap: wrap; /* Permite que los guías bajen a otra fila si no hay espacio */
+    padding: 20px; /* Añade padding al contenedor */
+}
+
+
+
+.guia img {
+    width: 150px; /* Imagen ocupa todo el ancho del contenedor */
+    height: 200px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
+    margin: 0 auto; /* Márgenes automáticos para centrar la imagen */
+}
+
+.guia h3 {
+    margin: 10px 0 5px 0; /* Margen alrededor del nombre */
+}
+
+.guia p {
+    font-size: 14px; /* Tamaño de fuente más pequeño para la descripción */
+    color: #555; /* Color gris para la descripción */
+    text-align: justify;
+}
+
+.mapa-container {
+    text-align: center; /* Centra el contenido del mapa */
+    margin: 30px 0; /* Espaciado arriba y abajo */
+}
+
+
+.mapa {
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    max-width: 800px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+}
+
+.mapa-posicion {
+    position: relative; /* Contenedor con posición relativa para que los elementos dentro puedan posicionarse */
+    display: inline-block; /* Para que el tamaño sea ajustado al mapa */
+}
+
+
+.marcador1 {
+    position: absolute;
+    top: 90px; /* Ajusta la posición de la imagen encima del mapa */
+    left: 300px; /* Ajusta la posición horizontal */
+    width: 30px; /* Tamaño del marcador */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.marcador1:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+}
+
+.marcador2 {
+    position: absolute;
+    top: 150px; /* Ajusta la posición de la imagen encima del mapa */
+    left: 250px; /* Ajusta la posición horizontal */
+    width: 30px; /* Tamaño del marcador */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.marcador2:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+}
+
+.marcador3 {
+    position: absolute;
+    top: 340px; /* Ajusta la posición de la imagen encima del mapa */
+    left: 600px; /* Ajusta la posición horizontal */
+    width: 30px; /* Tamaño del marcador */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.marcador3:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+}
+
+.marcador4 {
+    position: absolute;
+    top: 340px; /* Ajusta la posición de la imagen encima del mapa */
+    left: 430px; /* Ajusta la posición horizontal */
+    width: 30px; /* Tamaño del marcador */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Efecto de aumento al pasar el ratón */
+.marcador4:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+}

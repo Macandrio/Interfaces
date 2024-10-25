@@ -1,0 +1,39 @@
+.pie-de-pagina {
+    background-color: #7e5d2494; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar texto */
+}
+
+.contenido-pie {
+    display: flex; /* Usar flexbox para alinear elementos */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    flex-wrap: wrap; /* Permitir que el contenido se ajuste */
+}
+
+.informacion {
+    flex: 1; /* Permitir que la sección de información ocupe más espacio */
+}
+
+.informacion h2 {
+    margin: 0; /* Sin margen */
+}
+
+.redes-sociales {
+    display: flex; /* Usar flexbox para alinear íconos */
+    justify-content: center; /* Centrar los íconos */
+    align-items: center; /* Centrar verticalmente */
+    gap: 15px; /* Espacio entre íconos */
+    flex: 1; /* Permitir que la sección de redes sociales ocupe más espacio */
+}
+
+.redes-sociales a {
+    color: white; /* Color de los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    transition: color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+.redes-sociales a:hover {
+    color: #f0db4f; /* Color al pasar el cursor */
+}

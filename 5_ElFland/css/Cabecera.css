@@ -1,0 +1,122 @@
+.cabecera {
+    background-color: #84df72; /* Color de fondo para la cabecera */
+    position: fixed; /* Fija la cabecera en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Asegura que esté alineada a la izquierda */
+    right: 0; /* Asegura que esté alineada a la derecha */
+    z-index: 1000; /* Prioridad de la cabecera */
+    display: flex; /* Usa flexbox para organizar elementos */
+    justify-content: space-between; /* Distribuye el espacio entre elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra para mayor visibilidad */
+}
+
+
+.logo img {
+    height: 60px; /* Altura del logo */
+    margin-left: 150px;
+}
+
+.titulo h1 {
+    font-size: 20px; /* Tamaño de fuente del título */
+    font-family: 'Cinzel', serif; /* Fuente personalizada */
+    margin-right: 750px;
+}
+
+.navegacion {
+    list-style-type: none; /* Elimina viñetas */
+    display: flex; /* Alinea elementos de navegación en fila */
+    flex-grow: 1; /* Permite que la navegación ocupe más espacio */
+    gap: 0; /* Espacio entre elementos de navegación, ajustado al borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre elementos */
+    margin: 0; /* Sin márgenes para usar el espacio completamente */
+    justify-content: center; /* Centra los elementos de navegación */
+}
+
+.navegacion li {
+    display: flex; /* Utiliza flexbox para alinear el contenido en línea */
+    align-items: center; /* Alinea verticalmente el contenido en el centro */
+    padding: 0 20px; /* Espacio interno para los elementos de la lista */
+    border-right: 2px solid #050505; /* Borde derecho para todos los elementos */
+}
+
+.navegacion li i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+}
+
+
+
+
+.navegacion a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+.navegacion a:hover {
+    text-decoration: underline; /* Opción: añade subrayado al pasar el mouse */
+}
+
+.navegacion li:hover {
+    transform: scale(1.1); /* Aumenta tamaño al pasar el cursor */
+}
+
+/* Resto de tu CSS */
+
+
+
+.dropdown {
+    display: none; /* Oculta el menú por defecto */
+    right: 1px;
+    position: absolute;
+    margin-top: 250%;
+    width: 400%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 15px;
+    transition: opacity 0.2s ease, visibility 1s; /* Reduce el tiempo de la transición*/
+}
+
+    /* Muestra el dropdown cuando se pasa el mouse por encima de 'Usuario' */
+    .navegacion li.usuario:hover .dropdown {
+        display: block; /* Muestra el menú al pasar el mouse */
+    }
+
+
+        .dropdown input {
+            width: 100%; /* Ancho completo */
+            padding: 8px; /* Espaciado interno */
+            margin-bottom: 10px; /* Margen inferior */
+            border: 1px solid #ccc; /* Borde gris claro */
+            border-radius: 4px; /* Bordes redondeados */
+        }
+
+        .dropdown button {
+            width: 100%; /* Ancho completo */
+            padding: 8px; /* Espaciado interno */
+            background-color: #247e24; /* Color del botón */
+            color: white; /* Color del texto */
+            border: none; /* Sin borde */
+            border-radius: 4px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        }
+
+        .dropdown button:hover {
+            background-color: #0a3b0a; /* Color más oscuro */
+            transform: scale(1.05); /* Leve aumento al pasar el cursor */
+        }
+
+        .registro {
+            margin-top: 10px; /* Margen superior para el enlace de registro */
+            font-size: 14px; /* Tamaño de fuente para el registro */
+        }
+
+        .registro a {
+            color: #090c0e; /* Color del enlace */
+            text-decoration: none; /* Sin subrayado */
+        }
+
+        .registro a:hover {
+            text-decoration: underline; /* Subrayado al pasar el cursor */
+        }
