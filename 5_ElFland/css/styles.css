@@ -9,7 +9,7 @@ body {
 .contenedor {
     display: grid; /* Establece el contenedor como un grid */
     grid-template-rows: auto 1fr auto; /* Define las filas para la cabecera, cuerpo y pie de página */
-    height: 100vh; /* Altura del contenedor ocupa toda la ventana del navegador */
+    height: 100%; /* Altura del contenedor ocupa toda la ventana del navegador */
     padding-top: 70px; /* Ajusta el padding superior para que no cubra el contenido */
 }
 

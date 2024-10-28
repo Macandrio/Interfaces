@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Cinzel -->
     <title>Proyecto Grid</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="css/Cabecera.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="css/Cabecera_pie.css"> <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/Cuerpo.css"> <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="css/pie-pagina.css"> <!-- Enlace al archivo CSS -->
+
 </head>
 <body>
     <div class="contenedor"> <!-- Contenedor principal que utiliza Grid -->
@@ -63,9 +63,65 @@
                 </ul><!--Fin de la lista desordenada-->
             </nav> <!-- Fin Navegacion -->
         </div>  <!-- >Fin Cabecera -->
-        
+
+        <div class="seccion-banner">
+            <div class="contenido-centro">
+            <!-- Botones de opciones -->
+            <div class="opciones">
+                <button id="hoteles" onclick="mostrarHoteles()">Hoteles</button>
+                <button id="vuelo" onclick="mostrarVuelos()">Vuelo</button>
+            </div>
+
+            <!-- Formulario para Hoteles -->
+            <div id="formularioHoteles" class="formulario-opcion">
+                    <div class="formulario-campo">
+                        <label for="destinoHotel">Destino</label>
+                        <input type="text" id="destinoHotel" placeholder="Destino">
+                    </div>
+                    <div class="formulario-campo">
+                        
+                        <label for="entradaHotel">Entrada</label>
+                        <input type="date" id="entradaHotel">
+                    </div>
+                    <div class="formulario-campo">
+                        <label for="salidaHotel">Salida</label>
+                        <input type="date" id="salidaHotel">
+                    </div>
+                </div>
+
+                <!-- Formulario para Vuelo -->
+                <div id="formularioVuelo" class="formulario-opcion">
+                    <div class="formulario-campo">
+                        <label for="destinoVuelo">Destino</label>
+                        <input type="text" id="destinoVuelo" placeholder="Destino">
+                    </div>
+                    <div class="formulario-campo">
+                        <label for="salidaVuelo">Salida</label>
+                        <input type="date" id="salidaVuelo">
+                    </div>
+                    <div class="formulario-campo">
+                        <label for="regresoVuelo">Vuelta</label>
+                        <input type="date" id="regresoVuelo">
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <script>
+            function mostrarHoteles() {
+                document.getElementById('formularioHoteles').style.display = 'flex';
+                document.getElementById('formularioVuelo').style.display = 'none';
+            }
+    
+            function mostrarVuelos() {
+                document.getElementById('formularioHoteles').style.display = 'none';
+                document.getElementById('formularioVuelo').style.display = 'flex';
+            }
+        </script>
+
+        <!-- Cuerpo -->
 
         <div class="cuerpo">
+            
             <div class="titulo-busqueda"> <!-- Nuevo div que contiene el h2 y la barra de búsqueda -->
                 <h2>Destinos Populares</h2>
                 <div class="barra-busqueda">
@@ -205,7 +261,9 @@
                     <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <img src="/5_ElFland/Imagenes/tarjeta.png" alt="Descripción de la imagen" class="imagen-pie">
         </div>
+        
         
     </div>
 </body>

@@ -4,13 +4,13 @@
     padding: 0; /* Elimina padding por defecto */
 }
 
-body {
+.cuerpo {
     font-family: Arial, sans-serif; /* Fuente del cuerpo */
     background-color: #f0f0f0; /* Color de fondo */
     display: flex; /* Flexbox para centrar contenido */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
-    height: 100vh; /* Altura completa de la ventana */
+    flex-direction: column; /* Cambiar a columna para apilar elementos */
+    align-items: center; /* Centrar horizontalmente */
+    
 }
 
 .registro-contenedor {
@@ -19,19 +19,21 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
     padding: 20px; /* Espaciado interno */
     width: 300px; /* Ancho fijo del contenedor */
+    margin-bottom: 20px; /* Espacio inferior para separar del pie de página */
+    margin: 200px;
 }
 
-h2 {
+.registro-contenedor h2 {
     margin-bottom: 20px; /* Margen inferior del título */
     text-align: center; /* Alinear título al centro */
 }
 
-label {
+.registro-contenedor label {
     display: block; /* Cada etiqueta en una línea nueva */
     margin: 10px 0 5px; /* Espaciado superior e inferior */
 }
 
-input {
+.registro-contenedor input {
     width: 100%; /* Ancho completo */
     padding: 10px; /* Espaciado interno */
     margin-bottom: 15px; /* Espaciado inferior */
@@ -39,7 +41,7 @@ input {
     border-radius: 4px; /* Bordes redondeados */
 }
 
-button {
+.registro-contenedor button {
     width: 100%; /* Ancho completo */
     padding: 10px; /* Espaciado interno */
     background-color: #007bff; /* Color de fondo del botón */
@@ -49,20 +51,24 @@ button {
     cursor: pointer; /* Cambiar cursor al pasar */
 }
 
-button:hover {
+.registro-contenedor button:hover {
     background-color: #0056b3; /* Color más oscuro al pasar el cursor */
 }
 
-.mensaje {
+.registro-contenedor .mensaje {
     text-align: center; /* Alinear texto al centro */
     margin-top: 15px; /* Margen superior */
 }
 
-.mensaje a {
+.registro-contenedor .mensaje a {
     color: #007bff; /* Color del enlace */
     text-decoration: none; /* Sin subrayado */
 }
 
-.mensaje a:hover {
+.registro-contenedor .mensaje a:hover {
     text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+p{
+    margin: 15px;
 }

@@ -1,14 +1,116 @@
+/* Estilos para el contenedor de opciones */
+.opciones {
+    display: flex; /* Usar flexbox para alinear los botones */
+    justify-content: center; /* Centrar botones */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para los botones de opciones */
+button {
+    background-color: #247e24; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 15px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar cursor a mano */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    margin: 0 10px; /* Espacio entre botones */
+
+}
+
+/* Efecto hover para los botones */
+button:hover {
+    background-color: #0a3b0a; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Leve aumento al pasar el cursor */
+}
+
+/* Estilos para los formularios */
+.formulario-opcion {
+    display: none; /* Ocultar formularios por defecto */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad para destacar sobre el banner */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    max-width: 90%; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar formulario */
+}
+
+/* Estilos para los campos del formulario */
+.formulario-campo {
+    margin-bottom: 15px; /* Espacio inferior entre campos */
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block; /* Cada etiqueta en una línea nueva */
+    margin-bottom: 5px; /* Espacio inferior para etiquetas */
+    font-weight: bold; /* Negrita para etiquetas */
+}
+
+/* Estilos para los inputs */
+input[type="text"],
+input[type="date"] {
+    width: calc(100% - 20px); /* Ancho del input */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde del input */
+    border-radius: 20px; /* Bordes redondeados */
+    box-sizing: border-box; /* Para que el padding no afecte el ancho */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Efecto focus para los inputs */
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #247e24; /* Color de borde al enfocar */
+    outline: none; /* Quitar contorno por defecto */
+    box-shadow: 0 0 5px rgba(36, 126, 36, 0.5); /* Sombra ligera al enfocar */
+}
+
+
 .cuerpo {
     background-color: #e2e2e2;
     padding: 20px;
 }
 
 .cuerpo h2 {
-    margin: 50px 0 50px 0; /* Margen alrededor del título */
     padding: 10px;
     text-align: left;
     border-left: 2px solid black;
 }
+
+/* Estilo para el banner de ancho completo */
+.seccion-banner {
+    background-image: url('/5_ElFland/Imagenes/banner.webp'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
+    position: relative; /* Necesario para posicionar el contenido en el centro */
+    padding: 300px 0; /* Espacio superior e inferior opcional */
+    display: flex; /* Flexbox para centrar el contenido */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    color: white; /* Color de texto blanco para mejor contraste */
+    text-align: center; /* Alinea el texto en el centro */
+}
+
+/* Contenido centrado dentro del banner */
+.contenido-centro {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para resaltar el contenido */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 80%; /* Ancho máximo para que no ocupe todo el banner */
+}
+
+.contenido-centro h1 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+}
+
+.contenido-centro p {
+    font-size: 18px;
+    margin: 0;
+}
+
 
 .titulo-busqueda {
     display: flex; /* Usa flexbox para distribuir los elementos */
@@ -57,16 +159,11 @@
     transform: scale(1.05); /* Leve aumento al pasar el cursor */
 }
 
-
-
-
-
-
 .destinos {
     display: flex; /* Usar flexbox para alinear los destinos */
     flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
     justify-content: center; /* Centrar los elementos */
-    gap: 20px; /* Espaciado entre los destinos */
+    gap: 30px; /* Espaciado entre los destinos */
 
 }
 
@@ -84,6 +181,11 @@
 .destino:hover {
     transform: scale(1.05); /* Aumenta el tamaño al 105% */
 }
+
+.destino:hover, .guia:hover {
+    background-color: rgba(27, 133, 65, 0.476);
+}
+
 
 
 
@@ -194,11 +296,6 @@
     cursor: pointer;
 }
 
-/* Efecto de aumento al pasar el ratón */
-.marcador1:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 105% */
-}
-
 .marcador2 {
     position: absolute;
     top: 150px; /* Ajusta la posición de la imagen encima del mapa */
@@ -206,11 +303,6 @@
     width: 30px; /* Tamaño del marcador */
     height: auto;
     cursor: pointer;
-}
-
-/* Efecto de aumento al pasar el ratón */
-.marcador2:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 105% */
 }
 
 .marcador3 {
@@ -222,11 +314,6 @@
     cursor: pointer;
 }
 
-/* Efecto de aumento al pasar el ratón */
-.marcador3:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 105% */
-}
-
 .marcador4 {
     position: absolute;
     top: 340px; /* Ajusta la posición de la imagen encima del mapa */
@@ -236,7 +323,9 @@
     cursor: pointer;
 }
 
-/* Efecto de aumento al pasar el ratón */
-.marcador4:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+.mapa-posicion .marcador1:hover,
+.mapa-posicion .marcador2:hover,
+.mapa-posicion .marcador3:hover,
+.mapa-posicion .marcador4:hover {
+    transform: scale(1.1);
 }

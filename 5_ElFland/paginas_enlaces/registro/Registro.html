@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Cinzel -->
     <title>Proyecto Grid</title>
     <link rel="stylesheet" href="/5_ElFland/paginas_enlaces/registro/stylosregistros.css"> <!-- Enlace al archivo CSS -->
-    <link rel="stylesheet" href="/5_ElFland/css/Cabecera.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="/5_ElFland/css/Cabecera_pie.css"> <!-- Enlace al archivo CSS -->
 </head>
 <body>
 
@@ -23,7 +23,6 @@
         <div class="titulo">
             <h1>Agencia de viajes ElFland</h1>
         </div> <!-- Fin Titulo -->
-
 
         <!-- Navegacion -->
         <nav>
@@ -53,23 +52,64 @@
                 </li>
             </ul>
         </nav> <!-- Fin Navegacion -->
-    </div>  <!-- >Fin Cabecera -->
-
-    <div class="registro-contenedor">
-        <h2>Registro</h2>
-        <form action="#" method="post"> <!-- Cambia el action a la URL de tu servidor si es necesario -->
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-
-            <button type="submit">Registrarse</button>
-        </form>
-        <p class="mensaje">¿Ya tienes una cuenta? <a href="/5_ElFland/index.html">Inicia sesión aquí</a></p>
+    </div>  <!-- Fin Cabecera -->
+    
+    <div class="cuerpo">
+        <div class="registro-contenedor">
+            <h2>Registro</h2>
+            <form action="#" method="post"> <!-- Cambia el action a la URL de tu servidor si es necesario -->
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+        
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+        
+                <label for="clave">Clave de Acceso:</label>
+                <input type="password" id="clave" name="clave" required>
+        
+                <button type="submit">Registrarse</button>
+            </form>
+            <p class="mensaje">¿Ya tienes una cuenta? <a href="/5_ElFland/index.html">Inicia sesión aquí</a></p>
+        </div>
     </div>
+        
+
+    <div class="pie-de-pagina">
+        <div class="contenido-pie">
+            <div class="informacion">
+                <h2>Agencia de Viajes ElFland</h2>
+                <p>Transformamos tus sueños en aventuras inolvidables.</p>
+                <p>&copy; 2024 Todos los derechos reservados.</p>
+                <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                <p>Email: <a href="mailto:contacto@elfland.com">contacto@elfland.com</a></p>
+            </div>
+            <div class="enlaces-utiles">
+                <h2>Enlaces Útiles</h2>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <h2>Síguenos</h2>
+                <div class="iconos">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="suscripcion">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form>
+                <input type="email" placeholder="Ingresa tu email" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 </html>
