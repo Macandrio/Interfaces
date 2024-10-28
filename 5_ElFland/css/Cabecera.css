@@ -21,7 +21,7 @@
 .titulo h1 {
     font-size: 20px; /* Tamaño de fuente del título */
     font-family: 'Cinzel', serif; /* Fuente personalizada */
-    margin-right: 750px;
+    margin-right: 650px;
 }
 
 .navegacion {
@@ -40,13 +40,13 @@
     padding: 0 20px; /* Espacio interno para los elementos de la lista */
     border-right: 2px solid #050505; /* Borde derecho para todos los elementos */
 }
+.navegacion li:last-child{
+    border-right-width: 0px;
+}
 
 .navegacion li i {
     margin-right: 8px; /* Espacio entre el icono y el texto */
 }
-
-
-
 
 .navegacion a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
@@ -69,7 +69,7 @@
     display: none; /* Oculta el menú por defecto */
     right: 1px;
     position: absolute;
-    margin-top: 250%;
+    margin-top: 250px;
     width: 400%;
     background-color: white;
     border: 1px solid black;
