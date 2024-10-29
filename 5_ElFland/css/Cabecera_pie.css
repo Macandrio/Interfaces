@@ -1,51 +1,64 @@
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente principal para el cuerpo */
+    width: 100%;
+}
+
 .cabecera {
     width: 100%;
     background-color: #529645; /* Color de fondo para la cabecera */
     position: fixed; /* Fija la cabecera en la parte superior */
-    top: 0; /* Asegura que esté en la parte superior */
     z-index: 1000; /* Prioridad de la cabecera */
     display: flex; /* Usa flexbox para organizar elementos */
     justify-content: space-between; /* Distribuye el espacio entre elementos */
     align-items: center; /* Centra verticalmente los elementos */
     padding: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra para mayor visibilidad */
+    left: 0%;
+    right: 0%;
+    top: 0%;
+
 }
 
+.logo-titulo {
+    display: flex; /* Usar Flexbox para alinear en fila */
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
 
 .logo img {
-    height: 60px; /* Altura del logo */
-    margin-left: 250px;
+    height: 60px;
+    max-width: 100%; /* Asegura que el logo no se desborde */
+
 }
 
 .titulo h1 {
-    font-size: 20px; /* Tamaño de fuente del título */
-    font-family: 'Cinzel', serif; /* Fuente personalizada */
-    margin-right: 600px;
+    font-size: 25px; /* Usa rem en lugar de px para una mejor escalabilidad */
+    text-align: center; /* Centra el texto para pantallas pequeñas */
+
 }
 
 .navegacion {
     list-style-type: none; /* Elimina viñetas */
     display: flex; /* Alinea elementos de navegación en fila */
-    flex-grow: 1; /* Permite que la navegación ocupe más espacio */
-    gap: 0; /* Espacio entre elementos de navegación, ajustado al borde */
+    gap: 10px; /* Espacio entre elementos de navegación, ajustado al borde */
     cursor: pointer; /* Cambia el cursor al pasar sobre elementos */
-    margin: 0 40px 0 0; /* Sin márgenes para usar el espacio completamente */
     justify-content: center; /* Centra los elementos de navegación */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+
 }
 
 .navegacion li {
-    display: flex; /* Utiliza flexbox para alinear el contenido en línea */
-    align-items: center; /* Alinea verticalmente el contenido en el centro */
-    padding: 0 20px; /* Espacio interno para los elementos de la lista */
+    flex: 1; /* Hace que los elementos de la navegación se distribuyan */
+    min-width: 120px; /* Ancho mínimo para cada elemento */
+    text-align: center; /* Centra el texto */
     border-right: 2px solid #050505; /* Borde derecho para todos los elementos */
 }
 .navegacion li:last-child{
     border-right-width: 0px;
 }
 
-.navegacion li i {
-    margin-right: 8px; /* Espacio entre el icono y el texto */
-}
+
 
 .navegacion a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
@@ -60,15 +73,11 @@
     transform: scale(1.1); /* Aumenta tamaño al pasar el cursor */
 }
 
-/* Resto de tu CSS */
-
-
 
 .dropdown {
     display: none; /* Oculta el menú por defecto */
     right: 1px;
     position: absolute;
-    margin-top: 240px;
     width: 400%;
     background-color: white;
     border: 1px solid black;
@@ -123,6 +132,125 @@
 
         }
 
+
+        @media (max-width: 1066px) {
+            .cabecera {
+                width: 100%; /* Asegura que la cabecera use todo el ancho */
+                display: flex; /* Usar flexbox para organizar elementos */
+                flex-direction: column; /* Cambiar a columna para que la navegación esté debajo */
+                align-items: center; /* Centra los elementos horizontalmente */
+            }
+        
+            .titulo {
+                display: flex; /* Usar flexbox para alinear el logo y el título */
+                align-items: center; /* Centra verticalmente el logo y el título */
+                margin: 10px 0; /* Espacio vertical entre el título y el logo */
+                width: 100%; /* Asegura que ocupe todo el ancho */
+                justify-content: center; /* Centra el contenido */
+            }
+        
+            .logo {
+                padding: 5px; /* Añade padding para mejor visualización del borde */
+                display: flex; /* Permite el uso de flexbox */
+                justify-content: center; /* Centra el logo */
+            }
+            
+            .logo img {
+                max-height: 50px; /* Ajusta la altura del logo en pantallas pequeñas */
+                margin: 0; /* Elimina el margen para centrado */
+            }
+        
+            .titulo h1 {
+                font-size: 15px; /* Ajusta el tamaño de la fuente del título */
+                margin: 0 0 0 10px; /* Margen a la izquierda para espacio entre logo y título */
+            }
+            
+            .navegacion {
+                justify-content: center; /* Centra los elementos de navegación */
+                width: 740px; /* Asegura que la navegación use el ancho completo */
+                display: flex; /* Permite el uso de flexbox para alineación */
+                flex-direction: row; /* Mantiene los elementos en fila */
+                padding: 10px 0; /* Padding vertical para mejor visualización */
+                
+            }
+            
+            .navegacion li {
+                width: 120px;
+                border-right: 1px solid #050505; /* Borde derecho para separación */
+                text-align: center; /* Alinea texto al centro */
+                margin-left: 15px;
+                text-align: center;
+                
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .cabecera {
+                width: 100%; /* Asegura que la cabecera use todo el ancho */
+                display: flex; /* Usar flexbox para organizar elementos */
+                flex-direction: column; /* Cambiar a columna para que la navegación esté debajo */
+                align-items: center; /* Centra los elementos horizontalmente */
+            }
+        
+            .titulo {
+                display: flex; /* Usar flexbox para alinear el logo y el título */
+                align-items: center; /* Centra verticalmente el logo y el título */
+                margin: 10px 0; /* Espacio vertical entre el título y el logo */
+                width: 100%; /* Asegura que ocupe todo el ancho */
+                justify-content: center; /* Centra el contenido */
+            }
+        
+            .logo {
+                padding: 5px; /* Añade padding para mejor visualización del borde */
+                display: flex; /* Permite el uso de flexbox */
+                justify-content: center; /* Centra el logo */
+            }
+            
+            .logo img {
+                max-height: 50px; /* Ajusta la altura del logo en pantallas pequeñas */
+                margin: 0; /* Elimina el margen para centrado */
+            }
+        
+            .titulo h1 {
+                font-size: 15px; /* Ajusta el tamaño de la fuente del título */
+                margin: 0 0 0 10px; /* Margen a la izquierda para espacio entre logo y título */
+            }
+            
+            .navegacion {
+                justify-content: center; /* Centra los elementos de navegación */
+                width: 740px; /* Asegura que la navegación use el ancho completo */
+                display: flex; /* Permite el uso de flexbox para alineación */
+                flex-direction: row; /* Mantiene los elementos en fila */
+                padding: 10px 0; /* Padding vertical para mejor visualización */
+                
+            }
+            
+            .navegacion li {
+                width: 120px;
+                border-right: 1px solid #050505; /* Borde derecho para separación */
+                text-align: center; /* Alinea texto al centro */
+                margin-left: 15px;
+                text-align: center;
+                
+            }
+            
+        }
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+
+
+
+        
+        
         /*----------------------------------------------Pie de pagina---------------------------------------------------------------*/
 
         .pie-de-pagina {
@@ -241,4 +369,3 @@
         .suscripcion button:hover {
             background-color: #f1c40f; /* Color al pasar el cursor */
         }
-        

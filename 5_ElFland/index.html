@@ -6,119 +6,135 @@
     <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Cinzel -->
     <title>Proyecto Grid</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/Cabecera_pie.css"> <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="css/Cuerpo.css"> <!-- Enlace al archivo CSS -->
 
 </head>
 <body>
-    <div class="contenedor"> <!-- Contenedor principal que utiliza Grid -->
+    
 
         <!-- Contenedor Cabecera -->
         <div class="cabecera">
 
             <!-- Logo -->
-            <div class="logo">
+             <div class="logo-titulo">
+                <div class="logo">
                     <img src="Imagenes/file.png" alt="Logo de la Agencia ElFland" />
-            </div> <!-- Fin Logo -->
-
-            <!-- Titulo -->
-            <div class="titulo">
-                <h1>Agencia de viajes ElFland</h1>
-            </div> <!-- Fin Titulo -->
-
-
+                </div> <!-- Fin Logo -->
+            
+                <!-- Titulo -->
+                <div class="titulo">
+                    <h1>Agencia de viajes ElFland</h1>
+                </div> <!-- Fin Titulo -->
+             </div>
+           
+        
             <!-- Navegacion -->
             <nav>
                 <ul class="navegacion">
-                        <li>
-                            <a href="/5_ElFland/index.html">
-                                <i class="fa-solid fa-house"></i> Inicio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
-                                <i class="fa-solid fa-plane-departure"></i> Destino
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/5_ElFland/paginas_enlaces/pagina_tienda-blog/pagina.html">
-                                <i class="fa-solid fa-comment"></i> Blog</li>
-                            </a>
-                        <li>
-                            <a href="/5_ElFland/paginas_enlaces/pagina_tienda-blog/pagina.html">
-                                <i class="fa-solid fa-cart-shopping"></i> Tienda</li>
-                            </a>           
-                    
-                        <li class="usuario"><i class="fa-solid fa-user"></i> Usuario
-                            <div class="dropdown">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" placeholder="Introduce tu email" />
-                                <label for="password">Contraseña:</label>
-                                <input type="password" id="password" placeholder="Introduce tu contraseña" />
-                                <button>Iniciar Sesión</button>
-                                <p class="registro">¿No tienes cuenta? <a href="paginas_enlaces/registro/Registro.html">Regístrate aquí</a></p>
-                            </div>
-                        </li>
-                </ul><!--Fin de la lista desordenada-->
+                    <li>
+                        <a href="/5_ElFland/index.html">
+                            <i class="fa-solid fa-house"></i> Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
+                            <i class="fa-solid fa-plane-departure"></i> Destino
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-comment"></i> Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i> Tienda
+                        </a>
+                    </li>
+                    <li class="usuario">
+                        <i class="fa-solid fa-user"></i> Usuario
+                        <div class="dropdown">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Introduce tu email" />
+                            <label for="password">Contraseña:</label>
+                            <input type="password" id="password" placeholder="Introduce tu contraseña" />
+                            <button>Iniciar Sesión</button>
+                            <p class="registro">¿No tienes cuenta? <a href="paginas_enlaces/registro/Registro.html">Regístrate aquí</a></p>
+                        </div>
+                    </li>
+                </ul><!-- Fin de la lista desordenada -->
             </nav> <!-- Fin Navegacion -->
-        </div>  <!-- >Fin Cabecera -->
+        </div>  <!-- Fin Cabecera -->
+        
 
+
+
+        <!----------------------------------------banner--------------------------------------- -->
         <div class="seccion-banner">
             <div class="contenido-centro">
-            <!-- Botones de opciones -->
-            <div class="opciones">
-                <button id="hoteles" onclick="mostrarHoteles()">Hoteles</button>
-                <button id="vuelo" onclick="mostrarVuelos()">Vuelo</button>
-            </div>
 
-            <!-- Formulario para Hoteles -->
-            <div id="formularioHoteles" class="formulario-opcion">
+                <input type="radio" id="mostrarHotel" name="opciones" hidden>
+                <input type="radio" id="mostrarVuelo" name="opciones" hidden>
+
+                <div class="opciones">
+                    <label for="mostrarHotel" class="boton">Hoteles</label>
+                    <label for="mostrarVuelo" class="boton">Vuelo</label>
+                </div>
+
+                <!-- Formulario para Hoteles -->
+                <div id="formularioHoteles" class="formulario-opcion">
                     <div class="formulario-campo">
-                        <label for="destinoHotel">Destino</label>
-                        <input type="text" id="destinoHotel" placeholder="Destino">
-                    </div>
-                    <div class="formulario-campo">
+                        <div class="campo">
+                            <label for="destinoHotel">Destino</label>
+                            <input type="text" id="destinoHotel" placeholder="Destino">
+                        </div>
+                        <div class="campo">
+                            <label for="entradaHotel">Entrada</label>
+                            <input type="date" id="entradaHotel">
+                        </div>
+                        <div class="campo">
+                            <label for="salidaHotel">Salida</label>
+                            <input type="date" id="salidaHotel">
+                        </div>
+                        <div class="campo">
+                            <label for="mostrarHotel" class="boton">Buscar</label>
+                        </div>
                         
-                        <label for="entradaHotel">Entrada</label>
-                        <input type="date" id="entradaHotel">
-                    </div>
-                    <div class="formulario-campo">
-                        <label for="salidaHotel">Salida</label>
-                        <input type="date" id="salidaHotel">
                     </div>
                 </div>
 
                 <!-- Formulario para Vuelo -->
                 <div id="formularioVuelo" class="formulario-opcion">
                     <div class="formulario-campo">
-                        <label for="destinoVuelo">Destino</label>
-                        <input type="text" id="destinoVuelo" placeholder="Destino">
+                        <div class="campo">
+                            <label for="destinoVuelo">Destino</label>
+                            <input type="text" id="destinoVuelo" placeholder="Destino">
+                        </div>
+                        <div class="campo">
+                            <label for="salidaVuelo">Ida</label>
+                            <input type="date" id="salidaVuelo">
+                        </div>
+                        <div class="campo">
+                            <label for="regresoVuelo">Vuelta</label>
+                            <input type="date" id="regresoVuelo">
+                        </div>
+                        <div class="campo">
+                            <label for="mostrarVuelo" class="boton">Buscar</label>
+                        </div>
                     </div>
-                    <div class="formulario-campo">
-                        <label for="salidaVuelo">Salida</label>
-                        <input type="date" id="salidaVuelo">
-                    </div>
-                    <div class="formulario-campo">
-                        <label for="regresoVuelo">Vuelta</label>
-                        <input type="date" id="regresoVuelo">
-                    </div>
-                </div>            
+                </div>
+
             </div>
         </div>
-        <script>
-            function mostrarHoteles() {
-                document.getElementById('formularioHoteles').style.display = 'flex';
-                document.getElementById('formularioVuelo').style.display = 'none';
-            }
-    
-            function mostrarVuelos() {
-                document.getElementById('formularioHoteles').style.display = 'none';
-                document.getElementById('formularioVuelo').style.display = 'flex';
-            }
-        </script>
 
-        <!-- Cuerpo -->
+
+
+
+        
+
+<!----------------------------------------Cuerpo--------------------------------------- -->
+
 
         <div class="cuerpo">
             
@@ -129,37 +145,40 @@
                     <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
+
             
+<!----------------------------------------destinos--------------------------------------- -->
+
             <div class="destinos"> <!-- Contenedor para los destinos -->
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/enlace_mapa/Gondor/gondor.html">
                         <img src="Imagenes/Gondor.jpg" alt="Gondor" /> <!-- Imagen del destino -->
                     </a>   
                         <h3>Gondor</h3> <!-- Nombre del destino -->
                         <p>Gondor es un antiguo y noble reino de hombres, conocido por su impresionante capital, Minas Tirith, y su resistencia contra las fuerzas de Sauron.</p> <!-- Descripción -->
                 </div>
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
                         <img src="Imagenes/Moria.jpg" alt="Moria" /> <!-- Imagen del destino -->
                     </a>
                         <h3>Moria</h3> <!-- Nombre del destino -->
                         <p>Moria, también conocida como las Minas del Moria, es una vasta y antigua red de minas en las Montañas Nubladas, famosa por su arquitectura enana y su rica historia, pero ahora en ruinas y plagada de peligros, donde el grupo de viajeros enfrenta al temible Balrog.</p> <!-- Descripción -->
                 </div>
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
                         <img src="Imagenes/rivendel.jpg" alt="Rivendel" /> <!-- Imagen del destino -->
                     </a>
                         <h3>Rivendel</h3> <!-- Nombre del destino -->
                         <p>Rivendel es un hermoso refugio élfico situado en un valle montañoso, famoso por su arquitectura elegante y su atmósfera de paz, donde Elrond acoge a viajeros y se celebran consejos cruciales en la lucha contra Sauron.</p> <!-- Descripción -->
                 </div>
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
                         <img src="Imagenes/Minas Tirith.webp" alt="Minas Tirith" /> <!-- Imagen del destino -->
                     </a>
                         <h3>Minas Tirith</h3> <!-- Nombre del destino -->
                         <p>Minas Tirith es la majestuosa capital de Gondor, conocida por sus imponentes murallas de piedra blanca y sus siete niveles, coronada por la Torre de Ecthelion, donde los defensores luchan valientemente contra las fuerzas de Sauron.</p> <!-- Descripción -->
                 </div>
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
                         <img src="Imagenes/La_Comarca.webp" alt="La Comarca" /> <!-- Imagen del destino -->
                     </a>
@@ -167,7 +186,7 @@
                         <h3>La Comarca</h3> <!-- Nombre del destino -->
                         <p>La Comarca es la pacífica y verde tierra natal de los hobbits, caracterizada por sus colinas, campos cultivados y acogedoras casas subterráneas, donde los hobbits llevan una vida sencilla y feliz.</p> <!-- Descripción -->
                 </div>
-                <div class="destino">
+                <div class="destino fade-in">
                     <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
                         <img src="Imagenes/Lothlórien.webp" alt="Lothlórien" /> <!-- Imagen del destino -->
                     </a>
@@ -177,9 +196,10 @@
                 </div>
             </div>
             
+<!----------------------------------------guias--------------------------------------- -->
 
              <!-- Contenedor de las guías -->
-             <div class="guias-contenedor"> <!-- Nuevo div para el fondo -->
+             <div class="guias-contenedor fade-in"> <!-- Nuevo div para el fondo -->
                 <div class="guias">
                     <div class="titulo-busqueda"> <!-- Nuevo div que contiene el h2 y la barra de búsqueda -->
                         <h2>Guias De La Tierra Media</h2>
@@ -188,23 +208,23 @@
                             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </div>
-                <div class="guias-lista"> <!-- Contenedor para la lista de guías -->
-                    <div class="guia">
+                <div class="guias-lista fade-in"> <!-- Contenedor para la lista de guías -->
+                    <div class="guia fade-in">
                         <img src="Imagenes/frodo.webp" alt="Frodo Bolsón" /> <!-- Imagen del guía -->
                         <h3>Frodo Bolsón</h3> <!-- Nombre del guía -->
                         <p>Un hobbit valiente y decidido que lleva el Anillo Único en su misión para destruirlo</p> <!-- Descripción -->
                     </div>
-                    <div class="guia">
+                    <div class="guia fade-in">
                         <img src="Imagenes/Gandalf.jpg" alt="Gandalf" /> <!-- Imagen del guía -->
                         <h3>Gandalf</h3><!-- Nombre del guía -->
                         <p>Un sabio y poderoso mago que guía a los pueblos libres en la lucha contra el mal.</p> <!-- Descripción -->
                     </div>
-                    <div class="guia">
+                    <div class="guia fade-in">
                         <img src="Imagenes/Legolas.jpg" alt="Legolas" /> <!-- Imagen del guía -->
                         <h3>Legolas</h3> <!-- Nombre del guía -->
                         <p>Un ágil elfo experto en el arco, leal y conectado con la naturaleza.</p> <!-- Descripción -->
                     </div>
-                    <div class="guia">
+                    <div class="guia fade-in">
                         <img src="Imagenes/Galadriel.jpg" alt="Galadriel" /> <!-- Imagen del guía -->
                         <h3>Galadriel</h3> <!-- Nombre del guía -->
                         <p>La sabia reina élfica de Lothlórien, símbolo de bondad y poder.</p> <!-- Descripción -->
@@ -215,9 +235,9 @@
 
 
 
-            <div class="mapa-container">
+            <div class="mapa-container fade-in">
                 <h2>Selecciona tu destino en el mapa</h2>
-                <div class="mapa-posicion">
+                <div class="mapa-posicion ">
                     <!-- Imagen del mapa -->
                     <img src="Imagenes/mapa.webp" alt="Mapa de destinos" class="mapa" />
                     
@@ -238,33 +258,46 @@
                         <img src="Imagenes/marcador-de-posicion.png" alt="Marcador4" class="marcador4" />
                     </a>
                 </div>
-            </div>
-            
-            
-            
-            
+            </div>  
         </div>
+
+
         
         <div class="pie-de-pagina">
             <div class="contenido-pie">
                 <div class="informacion">
                     <h2>Agencia de Viajes ElFland</h2>
+                    <p>Transformamos tus sueños en aventuras inolvidables.</p>
                     <p>&copy; 2024 Todos los derechos reservados.</p>
-                    <p>Teléfono: +34 123 456 789</p>
-                    <p>Email: contacto@elfland.com</p>
+                    <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                    <p>Email: <a href="mailto:contacto@elfland.com">contacto@elfland.com</a></p>
+                </div>
+                <div class="enlaces-utiles">
+                    <h2>Enlaces Útiles</h2>
+                    <ul>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul>
                 </div>
                 <div class="redes-sociales">
                     <h2>Síguenos</h2>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <div class="iconos">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
                 </div>
             </div>
-            <img src="/5_ElFland/Imagenes/tarjeta.png" alt="Descripción de la imagen" class="imagen-pie">
+            <div class="suscripcion">
+                <h2>Suscríbete a nuestro boletín</h2>
+                <form>
+                    <input type="email" placeholder="Ingresa tu email" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
         </div>
-        
-        
-    </div>
 </body>
 </html>
