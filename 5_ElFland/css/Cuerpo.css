@@ -2,121 +2,144 @@
     box-sizing: border-box; /* Incluye el padding y el border en el tamaño total */
 }
 
+body{
+    font-family: Arial, sans-serif; /* Establece la fuente principal para el cuerpo */
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+/*------------------------------Bunner------------------------------*/
+
 /* Estilo para el banner de ancho completo */
 .seccion-banner {
-    background-image: url('/5_ElFland/Imagenes/banner.webp'); /* Imagen de fondo */
-    background-size: cover; /* La imagen cubre todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    position: relative; /* Necesario para posicionar el contenido en el centro */
-    padding: 300px 0; /* Espacio superior e inferior opcional */
-    display: flex; /* Flexbox para centrar el contenido */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    color: white; /* Color de texto blanco para mejor contraste */
-    text-align: center; /* Alinea el texto en el centro */
-}
-
-
-
-
-/*-------------------Div central banner------------------------------*/
-
-/* Contenido centrado dentro del banner */
-.contenido-centro {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para resaltar el contenido */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    max-width: 80%; /* Ancho máximo para que no ocupe todo el banner */
-}
-
-/* Estilos para el contenedor de opciones */
-.opciones {
+    background-image: url('/5_ElFland/Imagenes/banner.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 300px 0;
     display: flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-/* Estilos para los botones de opciones */
-.boton {
-    background-color: #247e24;
     color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 0 10px;
     text-align: center;
 }
 
-/* Efecto hover para los botones */
-.boton:hover {
-    background-color: #247e24;
-    transform: scale(1.05);
-}
+    /* Contenido centrado dentro del banner */
+    .contenido-centro {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%; /* Más ancho para abarcar más espacio */
+    }
 
-/* Estilos para los formularios */
-.formulario-opcion {
-    display: none; /* Ocultamos los formularios por defecto */
-    background-color: rgba(64, 187, 39, 0.9);
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 100%;
-}
+    /* Contenedor de opciones para los botones Hotel y vuelo*/
+    .opciones {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
 
-/* Mostrar el formulario de hoteles cuando el radio está seleccionado */
-#mostrarHotel:checked ~ #formularioHoteles {
-    display: block;
-}
+    /* Estilo para los botones de opciones */
+    .boton {
+        background-color: #247e24;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        margin: 0 10px;
+    }
 
-/* Mostrar el formulario de vuelo cuando el radio está seleccionado */
-#mostrarVuelo:checked ~ #formularioVuelo {
-    display: block;
-}
+    /* Efecto hover para los botones */
+    .boton:hover {
+        background-color: #0a3b0a;
+        transform: scale(1.05);
+    }
 
-/* Estilos para los campos del formulario */
-.formulario-campo {
-    display: flex; /* Usar flexbox para alinear los elementos en una fila */
-    justify-content: space-between; /* Espacio entre los elementos */
-    margin-bottom: 15px; /* Espacio inferior entre grupos de campos */
-}
+        /* Formulario */
+        .formulario-opcion {
+            display: none;
+            background-color: rgba(64, 187, 39, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
 
-/* Estilos para cada campo individual */
-.campo {
-    flex: 1; /* Cada campo toma el mismo ancho */
-    margin: 0 10px; /* Espacio lateral entre campos */
-}
+        /* Mostrar formulario seleccionado */
+        #mostrarHotel:checked ~ #formularioHoteles,
+        #mostrarVuelo:checked ~ #formularioVuelo {
+            display: block;
+        }
 
-/* Estilos para las etiquetas */
-label {
-    display: block; /* Cada etiqueta en una línea nueva */
-    margin-bottom: 5px; /* Espacio inferior para etiquetas */
-    font-weight: bold; /* Negrita para etiquetas */
-}
+        /* Contenedor para alinear campos e inputs */
+        .formulario-campo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
 
-/* Estilos para los inputs */
-input[type="text"], input[type="date"] {
-    width: 100%; /* Ancho completo del input */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde del input */
-    border-radius: 20px; /* Bordes redondeados */
-    box-sizing: border-box; /* Para que el padding no afecte el ancho */
-    transition: border-color 0.3s; /* Transición suave para el borde */
-}
+        /* Ajuste para que cada campo ocupe el mismo ancho */
+        .campo {
+            flex: 1;
+            margin: 0 10px;
+        }
 
-/* Efecto focus para los inputs */
-input[type="text"]:focus,
-input[type="date"]:focus {
-    border-color: #247e24; /* Color de borde al enfocar */
-    outline: none; /* Quitar contorno por defecto */
-    box-shadow: 0 0 5px rgba(36, 126, 36, 0.5); /* Sombra ligera al enfocar */
-}
+        /* Estilo uniforme para los inputs */
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        /* Estilo al enfocar inputs */
+        input[type="text"]:focus, input[type="date"]:focus {
+            border-color: #247e24;
+            outline: none;
+            box-shadow: 0 0 5px rgba(36, 126, 36, 0.5);
+        }
+
+        /* Botón Buscar alineado con los inputs */
+        .boton-buscar {
+            background-color: #247e24;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .boton-buscar:hover {
+            background-color: #0a3b0a;
+            transform: scale(1.05);
+        }
+
+
+        /* Ajustes para el contenedor del formulario para que el botón quede en la esquina */
+        .formulario-opcion {
+            display: none;
+            background-color: rgba(64, 187, 39, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative; /* Necesario para posicionar el botón dentro */
+        }
 
 
 
-
-/*-------------------Cuerpo------------------------------*/
+/*------------------------------Cuerpo------------------------------*/
 
 
 .cuerpo {
@@ -190,8 +213,6 @@ input[type="date"]:focus {
 
 
 /*-------------------Destinos------------------------------*/
-
-
 .destinos {
     display: flex; /* Usar flexbox para alinear los destinos */
     flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias filas */
@@ -199,34 +220,28 @@ input[type="date"]:focus {
     gap: 30px; /* Espaciado entre los destinos */
 }
 
-.destino {
-    background-color: white; /* Fondo blanco para cada destino */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
-    padding: 15px; /* Espaciado interno, ajusta según sea necesario */
-    width: 100%; /* Usar 100% para que ocupe todo el espacio disponible */
-    max-width: 450px; /* Ancho máximo de 450px */
-    text-align: left; /* Alinear el texto a la izquierda */
-    transition: transform 0.3s ease; /* Transición suave para el aumento */
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
-    /* Elimina cualquier restricción de altura */
-}
+    .destino {
+        background-color: white; /* Fondo blanco para cada destino */
+        border-radius: 8px; /* Bordes redondeados */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+        padding: 15px; /* Espaciado interno, ajusta según sea necesario */
+        width: 100%; /* Usar 100% para que ocupe todo el espacio disponible */
+        max-width: 450px; /* Ancho máximo de 450px */
+        text-align: left; /* Alinear el texto a la izquierda */
+        transition: transform 0.3s ease; /* Transición suave para el aumento */
+        box-sizing: border-box; /* Incluye el padding en el cálculo del ancho y alto */
+        
+    }
 
-/* Efecto de aumento al pasar el ratón */
-.destino:hover {
-    transform: scale(1.05); /* Aumenta el tamaño al 105% */
-}
-
-.destino:hover, .guia:hover {
-    background-color: rgba(27, 133, 65, 0.476);
-}
+    /* Efecto de aumento para cada destino al pasar el cursor */
+    .destino:hover {
+        transform: scale(1.1); /* Aumenta el tamaño al 105% */
+    }
 
 .destino img {
     width: 100%; /* Imagen ocupa todo el ancho del contenedor */
     height: 65%;
     border-radius: 8px 8px 0 0; /* Bordes redondeados en la parte superior */
-
-
 }
 
 .destino h3 {
@@ -241,48 +256,7 @@ input[type="date"]:focus {
     overflow-wrap: break-word; /* Permite que las palabras largas se dividan en varias líneas */
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards; /* Aplica la animación */
-}
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Para cada destino, añade el retraso de animación */
-.destino {
-    animation: fadeIn 1s forwards; /* Aplicar la animación */
-    animation-delay: 0s; /* Inicialmente sin retraso */
-}
-
-.destino:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.destino:nth-child(2) {
-    animation-delay: 0.4s;
-}
-
-.destino:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-.destino:nth-child(4) {
-    animation-delay: 0.8s;
-}
-
-.destino:nth-child(5) {
-    animation-delay: 1s;
-}
-
-.destino:nth-child(6) {
-    animation-delay: 1.2s;
-}
 
 
 /* Estilo para pantallas de 768px o menos */
@@ -335,7 +309,8 @@ input[type="date"]:focus {
 
 /* Efecto de aumento al pasar el ratón */
 .guia:hover {
-    transform: scale(1.05), translateY(0);; /* Aumenta el tamaño al 105% */
+    transform: scale(1.1); /* Aumenta el tamaño al 105% */
+    background-color: rgba(27, 133, 65, 0.476);
 }
 
 
@@ -369,40 +344,6 @@ input[type="date"]:focus {
     text-align: justify;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards; /* Aplica la animación */
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Para cada guía, añade el retraso de animación */
-.guia {
-    animation: fadeIn 1s forwards; /* Aplica la animación */
-    animation-delay: 0s; /* Inicialmente sin retraso */
-}
-
-.guia:nth-child(1) {
-    animation-delay: 3s;
-}
-
-.guia:nth-child(2) {
-    animation-delay: 3.1s;
-}
-
-.guia:nth-child(3) {
-    animation-delay: 3.2s;
-}
-
-.guia:nth-child(4) {
-    animation-delay: 3.3s;
-}
 
 /*-------------------Mapa------------------------------*/
 
@@ -470,21 +411,4 @@ input[type="date"]:focus {
     transform: scale(1.1);
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s forwards; /* Aplica la animación */
-}
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Para el contenedor del mapa, añade un retraso de animación si deseas */
-.mapa-container {
-    animation: fadeIn 1s forwards; /* Aplica la animación */
-    animation-delay: 4.3s; /* Ajusta el retraso si es necesario */
-}
