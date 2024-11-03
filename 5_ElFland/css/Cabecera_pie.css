@@ -1,81 +1,72 @@
 body {
-    font-family: Arial, sans-serif; /* Establece la fuente principal para el cuerpo */
+    font-family: Arial, sans-serif;
     width: 100%;
 }
 
 .cabecera {
     width: 100%;
-    background-color: #529645; /* Color de fondo para la cabecera */
-    position: fixed; /* Fija la cabecera en la parte superior */
-    z-index: 1000; /* Prioridad de la cabecera */
-    display: flex; /* Usa flexbox para organizar elementos */
-    justify-content: space-between; /* Distribuye el espacio entre elementos */
-    align-items: center; /* Centra verticalmente los elementos */
+    background-color: #66B257;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega una sombra para mayor visibilidad */
-    left: 0%;
-    right: 0%;
-    top: 0%;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .logo-titulo {
-    display: flex; /* Usar Flexbox para alinear en fila */
-    flex-direction: row; /* Asegura que los elementos estén en fila */
-    align-items: center; /* Alinea verticalmente los elementos */
-    justify-content: center; /* Centra horizontalmente el contenido */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo img {
     height: 60px;
-    max-width: 100%; /* Asegura que el logo no se desborde */
-
+    max-width: 100%;
 }
 
 .titulo h1 {
-    font-size: 25px; /* Usa rem en lugar de px para una mejor escalabilidad */
-    text-align: center; /* Centra el texto para pantallas pequeñas */
-
+    font-size: 25px;
+    text-align: center;
 }
 
 .navegacion {
-    list-style-type: none; /* Elimina viñetas */
-    display: flex; /* Alinea elementos de navegación en fila */
-    gap: 10px; /* Espacio entre elementos de navegación, ajustado al borde */
-    cursor: pointer; /* Cambia el cursor al pasar sobre elementos */
-    justify-content: center; /* Centra los elementos de navegación */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten */
-
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .navegacion li {
-    flex: 1; /* Hace que los elementos de la navegación se distribuyan */
-    min-width: 120px; /* Ancho mínimo para cada elemento */
-    text-align: center; /* Centra el texto */
-    border-right: 2px solid #050505; /* Borde derecho para todos los elementos */
-}
-.navegacion li:last-child{
-    border-right-width: 0px;
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    border-right: 2px solid #050505;
 }
 
-
+.navegacion li:last-child {
+    border-right-width: 0;
+}
 
 .navegacion a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Hereda el color del elemento padre */
+    text-decoration: none;
+    color: inherit;
 }
 
-.navegacion a:hover {
-    text-decoration: underline; /* Opción: añade subrayado al pasar el mouse */
+.navegacion a:hover, .navegacion li:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
 }
-
-.navegacion li:hover {
-    transform: scale(1.1); /* Aumenta tamaño al pasar el cursor */
-}
-
 
 .dropdown {
-    display: none; /* Oculta el menú por defecto */
+    display: none;
     right: 1px;
     position: absolute;
     width: 400%;
@@ -83,289 +74,223 @@ body {
     border: 1px solid black;
     border-radius: 8px;
     padding: 15px;
-    transition: opacity 0.2s ease, visibility 1s; /* Reduce el tiempo de la transición*/
+    transition: opacity 0.2s ease, visibility 1s;
     text-align: justify;
 }
 
-    /* Muestra el dropdown cuando se pasa el mouse por encima de 'Usuario' */
-    .navegacion li.usuario:hover .dropdown {
-        display: block; /* Muestra el menú al pasar el mouse */
+.navegacion li.usuario:hover .dropdown {
+    display: block;
+}
+
+.dropdown input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown button {
+    width: 100%;
+    padding: 8px;
+    background-color: #27633E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown button:hover {
+    background-color: #1C5F1C;
+    transform: scale(1.05);
+}
+
+.registro {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.registro a {
+    color: #090c0e;
+    text-decoration: none;
+}
+
+.registro a:hover {
+    text-decoration: none;
+    color: #9d2424;
+}
+
+@media (max-width: 1066px) {
+    .cabecera {
+        flex-direction: column;
+        align-items: center;
     }
 
+    .titulo {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        width: 100%;
+        justify-content: center;
+    }
 
-        .dropdown input {
-            width: 100%; /* Ancho completo */
-            padding: 8px; /* Espaciado interno */
-            margin-bottom: 10px; /* Margen inferior */
-            border: 1px solid #ccc; /* Borde gris claro */
-            border-radius: 4px; /* Bordes redondeados */
-        }
+    .logo {
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
 
-        .dropdown button {
-            width: 100%; /* Ancho completo */
-            padding: 8px; /* Espaciado interno */
-            background-color: #247e24; /* Color del botón */
-            color: white; /* Color del texto */
-            border: none; /* Sin borde */
-            border-radius: 4px; /* Bordes redondeados */
-            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-        }
+    .logo img {
+        max-height: 50px;
+    }
 
-        .dropdown button:hover {
-            background-color: #0a3b0a; /* Color más oscuro */
-            transform: scale(1.05); /* Leve aumento al pasar el cursor */
-        }
+    .titulo h1 {
+        font-size: 15px;
+        margin: 0 0 0 10px;
+    }
 
-        .registro {
-            margin-top: 10px; /* Margen superior para el enlace de registro */
-            font-size: 14px; /* Tamaño de fuente para el registro */
-        }
+    .navegacion {
+        width: 740px;
+        flex-direction: row;
+        padding: 10px 0;
+    }
 
-        .registro a {
-            color: #090c0e; /* Color del enlace */
-            text-decoration: none; /* Sin subrayado */
-        }
+    .navegacion li {
+        width: 120px;
+        border-right: 1px solid #050505;
+        text-align: center;
+        margin-left: 15px;
+    }
+}
 
-        .registro a:hover {
-            text-decoration: none; /* Subrayado al pasar el cursor */
-            color: #9d2424; /* Color blanco para el párrafo */
+@media (max-width: 768px) {
+    .cabecera, .titulo, .logo {
+        width: 100%;
+        flex-direction: column;
+    }
 
-        }
+    .navegacion {
+        width: 740px;
+        padding: 10px 0;
+    }
 
+    .navegacion li {
+        width: 120px;
+        border-right: 1px solid #050505;
+        text-align: center;
+        margin-left: 15px;
+    }
+}
 
-        @media (max-width: 1066px) {
-            .cabecera {
-                width: 100%; /* Asegura que la cabecera use todo el ancho */
-                display: flex; /* Usar flexbox para organizar elementos */
-                flex-direction: column; /* Cambiar a columna para que la navegación esté debajo */
-                align-items: center; /* Centra los elementos horizontalmente */
-            }
-        
-            .titulo {
-                display: flex; /* Usar flexbox para alinear el logo y el título */
-                align-items: center; /* Centra verticalmente el logo y el título */
-                margin: 10px 0; /* Espacio vertical entre el título y el logo */
-                width: 100%; /* Asegura que ocupe todo el ancho */
-                justify-content: center; /* Centra el contenido */
-            }
-        
-            .logo {
-                padding: 5px; /* Añade padding para mejor visualización del borde */
-                display: flex; /* Permite el uso de flexbox */
-                justify-content: center; /* Centra el logo */
-            }
-            
-            .logo img {
-                max-height: 50px; /* Ajusta la altura del logo en pantallas pequeñas */
-                margin: 0; /* Elimina el margen para centrado */
-            }
-        
-            .titulo h1 {
-                font-size: 15px; /* Ajusta el tamaño de la fuente del título */
-                margin: 0 0 0 10px; /* Margen a la izquierda para espacio entre logo y título */
-            }
-            
-            .navegacion {
-                justify-content: center; /* Centra los elementos de navegación */
-                width: 740px; /* Asegura que la navegación use el ancho completo */
-                display: flex; /* Permite el uso de flexbox para alineación */
-                flex-direction: row; /* Mantiene los elementos en fila */
-                padding: 10px 0; /* Padding vertical para mejor visualización */
-                
-            }
-            
-            .navegacion li {
-                width: 120px;
-                border-right: 1px solid #050505; /* Borde derecho para separación */
-                text-align: center; /* Alinea texto al centro */
-                margin-left: 15px;
-                text-align: center;
-                
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .cabecera {
-                width: 100%; /* Asegura que la cabecera use todo el ancho */
-                display: flex; /* Usar flexbox para organizar elementos */
-                flex-direction: column; /* Cambiar a columna para que la navegación esté debajo */
-                align-items: center; /* Centra los elementos horizontalmente */
-            }
-        
-            .titulo {
-                display: flex; /* Usar flexbox para alinear el logo y el título */
-                align-items: center; /* Centra verticalmente el logo y el título */
-                margin: 10px 0; /* Espacio vertical entre el título y el logo */
-                width: 100%; /* Asegura que ocupe todo el ancho */
-                justify-content: center; /* Centra el contenido */
-            }
-        
-            .logo {
-                padding: 5px; /* Añade padding para mejor visualización del borde */
-                display: flex; /* Permite el uso de flexbox */
-                justify-content: center; /* Centra el logo */
-            }
-            
-            .logo img {
-                max-height: 50px; /* Ajusta la altura del logo en pantallas pequeñas */
-                margin: 0; /* Elimina el margen para centrado */
-            }
-        
-            .titulo h1 {
-                font-size: 15px; /* Ajusta el tamaño de la fuente del título */
-                margin: 0 0 0 10px; /* Margen a la izquierda para espacio entre logo y título */
-            }
-            
-            .navegacion {
-                justify-content: center; /* Centra los elementos de navegación */
-                width: 740px; /* Asegura que la navegación use el ancho completo */
-                display: flex; /* Permite el uso de flexbox para alineación */
-                flex-direction: row; /* Mantiene los elementos en fila */
-                padding: 10px 0; /* Padding vertical para mejor visualización */
-                
-            }
-            
-            .navegacion li {
-                width: 120px;
-                border-right: 1px solid #050505; /* Borde derecho para separación */
-                text-align: center; /* Alinea texto al centro */
-                margin-left: 15px;
-                text-align: center;
-                
-            }
-            
-        }
-        
-        
-        
+/* Pie de pagina */
+.pie-de-pagina {
+    background-color: #6E4A0C;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        
-        
-        
-        
-        
-        
+.contenido-pie {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.informacion, .enlaces-utiles, .redes-sociales {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.pie-de-pagina a {
+    color: inherit; /* Mantiene el color actual del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    cursor: default; /* Cambia el cursor a uno de texto */
+}
+
+.pie-de-pagina a:hover {
+    text-decoration: none; /* Asegura que el subrayado no aparezca al pasar el ratón */
+    color: inherit; /* No cambia el color al pasar el ratón */
+}
+
+.enlaces-utiles ul {
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Elimina el padding adicional */
+    margin: 0; /* Elimina el margen adicional */
+}
+
+.enlaces-utiles ul li {
+    margin-bottom: 10px; /* Ajusta el valor según la separación que desees */
+}
 
 
+.redes-sociales .iconos {
+    display: flex;
+    justify-content: center; /* Centra los iconos en el pie de página */
+    gap: 15px; /* Espacio entre iconos */
+}
 
+.redes-sociales a {
+    color: white; /* Color de los iconos */
+    font-size: 28px; /* Tamaño de los iconos */
+    transition: color 0.3s ease; /* Transición de color */
+}
 
-        
-        
-        /*----------------------------------------------Pie de pagina---------------------------------------------------------------*/
+.redes-sociales a:hover {
+    color: #f0db4f; /* Color de hover para los iconos */
+}
 
-        .pie-de-pagina {
-            background-color: #946310; /* Color de fondo */
-            color: white; /* Color del texto */
-            padding: 40px 20px; /* Espaciado interno */
-            text-align: center; /* Centrar texto */
-        }
-        
-        .contenido-pie {
-            display: flex; /* Usar flexbox para alinear elementos */
-            justify-content: space-around; /* Espacio entre elementos */
-            align-items: flex-start; /* Alinear verticalmente */
-            flex-wrap: wrap; /* Permitir que el contenido se ajuste */
-            margin-bottom: 20px; /* Margen inferior */
-        }
-        
-        .informacion {
-            flex: 1; /* Ocupa más espacio */
-            max-width: 400px; /* Máximo ancho */
-            margin: 0 20px; /* Margen horizontal */
-        }
-        
-        .informacion h2 {
-            margin: 0; /* Sin margen */
-            font-size: 24px; /* Tamaño de fuente */
-        }
-        
-        .enlaces-utiles {
-            flex: 1; /* Ocupa más espacio */
-            max-width: 400px; /* Máximo ancho */
-            margin: 0 20px; /* Margen horizontal */
-        }
-        
-        .enlaces-utiles h2 {
-            margin: 0; /* Sin margen */
-        }
-        
-        .enlaces-utiles ul {
-            list-style-type: none; /* Sin viñetas */
-            padding: 0; /* Sin padding */
-        }
-        
-        .enlaces-utiles li {
-            margin: 10px 0; /* Margen entre enlaces */
-        }
-        
-        .enlaces-utiles a {
-            color: white; /* Color de los enlaces */
-            text-decoration: none; /* Sin subrayado */
-        }
-        
-        .enlaces-utiles a:hover {
-            text-decoration: underline; /* Subrayar al pasar el cursor */
-        }
-        
-        .redes-sociales {
-            flex: 1; /* Ocupa más espacio */
-            max-width: 400px; /* Máximo ancho */
-            margin: 0 20px; /* Margen horizontal */
-            text-align: right; /* Alinear contenido a la derecha */
-        }
-        
-        .redes-sociales h2 {
-            margin: 0; /* Sin margen */
-        }
-        
-        .iconos {
-            display: flex; /* Usar flexbox para alinear íconos */
-            justify-content: flex-end; /* Alinear íconos a la derecha */
-            align-items: center; /* Centrar verticalmente */
-            gap: 15px; /* Espacio entre íconos */
-        }
-        
-        .redes-sociales a {
-            color: white; /* Color de los íconos */
-            font-size: 28px; /* Tamaño de los íconos */
-            transition: color 0.3s ease; /* Transición suave al cambiar color */
-        }
-        
-        .redes-sociales a:hover {
-            color: #f0db4f; /* Color al pasar el cursor */
-        }
-        
-        .suscripcion {
-            margin-top: 20px; /* Margen superior */
-        }
-        
-        .suscripcion h2 {
-            margin-bottom: 10px; /* Margen inferior */
-        }
-        
-        .suscripcion form {
-            display: flex; /* Usar flexbox para alinear el formulario */
-            justify-content: center; /* Centrar el formulario */
-            gap: 10px; /* Espacio entre el input y el botón */
-        }
-        
-        .suscripcion input[type="email"] {
-            padding: 10px; /* Espaciado interno */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            outline: none; /* Sin contorno */
-        }
-        
-        .suscripcion button {
-            padding: 10px 20px; /* Espaciado interno */
-            background-color: #f0db4f; /* Color del botón */
-            color: #333; /* Color del texto del botón */
-            border: none; /* Sin borde */
-            border-radius: 5px; /* Bordes redondeados */
-            cursor: pointer; /* Cambiar cursor */
-            transition: background-color 0.3s; /* Transición al cambiar color */
-        }
-        
-        .suscripcion button:hover {
-            background-color: #f1c40f; /* Color al pasar el cursor */
-        }
+/* Estilos para la sección de suscripción */
+.suscripcion {
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.suscripcion h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #FBF5CB; /* Color para destacar el título */
+}
+
+.suscripcion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.suscripcion input[type="email"] {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid #f0db4f; /* Borde del campo de entrada */
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.suscripcion input[type="email"]:focus {
+    border-color: #ffffff; /* Cambia el color del borde al hacer clic */
+}
+
+.suscripcion button {
+    background-color: #f0db4f;
+    color: #3c5c3c;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.suscripcion button:hover {
+    background-color: #d4b830;
+    transform: scale(1.05);
+}
+

@@ -44,7 +44,7 @@ body{
 
     /* Estilo para los botones de opciones */
     .boton {
-        background-color: #247e24;
+        background-color: #1C5E1C;
         color: white;
         border: none;
         border-radius: 20px;
@@ -64,7 +64,7 @@ body{
         /* Formulario */
         .formulario-opcion {
             display: none;
-            background-color: rgba(64, 187, 39, 0.9);
+            background-color: #115C00;
             border-radius: 10px;
             padding: 20px;
             position: relative;
@@ -109,7 +109,7 @@ body{
 
         /* Botón Buscar alineado con los inputs */
         .boton-buscar {
-            background-color: #247e24;
+            background-color: #196419;
             color: white;
             border: none;
             border-radius: 20px;
@@ -136,6 +136,60 @@ body{
             padding: 20px;
             position: relative; /* Necesario para posicionar el botón dentro */
         }
+
+/*------------------------------Carrusel------------------------------*/
+
+.seccion-introduccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 20px;
+    gap: 20px;
+}
+
+.carrusel {
+    width: 60%;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    animation: slideAnimation 20s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(0); }
+}
+
+.texto-agencia {
+    width: 35%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.texto-agencia h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.texto-agencia p {
+    font-size: 16px;
+    color: #555;
+}
 
 
 
@@ -281,7 +335,7 @@ body{
 
 
 .guias-contenedor {
-    background-color: #a2bf84; /* Cambia el color según tus preferencias */
+    background-color: #517622ac; /* Cambia el color según tus preferencias */
     padding: 20px; /* Espacio interno alrededor de las guías */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
@@ -310,7 +364,7 @@ body{
 /* Efecto de aumento al pasar el ratón */
 .guia:hover {
     transform: scale(1.1); /* Aumenta el tamaño al 105% */
-    background-color: rgba(27, 133, 65, 0.476);
+    background-color: #D0F6DE;
 }
 
 

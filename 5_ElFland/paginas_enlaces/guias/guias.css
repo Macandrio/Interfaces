@@ -1,0 +1,92 @@
+/* Sección de Guías */
+/* Sección de Guías */
+.guias {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: #3c5c3c;
+    margin-bottom: 20px; /* Ajusta el margen inferior para mayor espacio */
+    margin-top: 100px; /* Añade margen superior si es necesario */
+}
+
+/* Otros estilos existentes */
+
+
+.grid-guias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    display: flex;
+    border: 2px solid #3c5c3c;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+.tarjeta img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-right: 2px solid #3c5c3c;
+}
+
+.tarjeta-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: left;
+}
+
+.tarjeta h3 {
+    font-size: 24px;
+    color: #3c5c3c;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.descripcion {
+    font-style: italic;
+    margin-top: 10px;
+    color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-guias {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tarjeta img {
+        width: 100%;
+        height: 200px;
+        border-right: none;
+        border-bottom: 2px solid #3c5c3c;
+    }
+
+    .tarjeta-contenido {
+        align-items: center;
+    }
+}

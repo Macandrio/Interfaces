@@ -5,33 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"> <!-- Enlace a la fuente Cinzel -->
-    <title>Proyecto Grid</title>
-    <link rel="stylesheet" href="/5_ElFland/css/Cabecera_pie.css"> <!-- Enlace al archivo CSS -->
+    <title>ElFland - Viajes a la Tierra Media</title>
     <link rel="stylesheet" href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="/5_ElFland/css/Cabecera_pie.css"> <!-- Enlace al archivo CSS -->
+
 </head>
+
 <body>
-    <!-- Encabezado -->
-    <div class="cabecera">
+
+
+     <!-- Contenedor Cabecera -->
+     <div class="cabecera">
 
         <!-- Logo -->
-        <div class="logo">
-            <img src="/5_ElFland/Imagenes/file.png" alt="Logo de la Agencia ElFland" />
-        </div> <!-- Fin Logo -->
-
-        <!-- Titulo -->
-        <div class="titulo">
-            <h1>Agencia de viajes ElFland</h1>
-        </div> <!-- Fin Titulo -->
-
+         <div class="logo-titulo">
+            <div class="logo">
+                <img src="/5_ElFland/Imagenes/file.png" alt="Logo de la Agencia ElFland" />
+            </div> <!-- Fin Logo -->
+        
+            <!-- Titulo -->
+            <div class="titulo">
+                <h1>Agencia de Viajes ElFland</h1>
+            </div> <!-- Fin Titulo -->
+         </div>
+       
+    
         <!-- Navegacion -->
         <nav>
             <ul class="navegacion">
-                <a href="/5_ElFland/index.html">
-                    <li><i class="fa-solid fa-house"></i> Inicio</li>
-                </a>
-                <li><i class="fa-solid fa-plane-departure"></i> Destino</li>
-                <li><i class="fa-solid fa-comment"></i> Blog</li>
-                <li><i class="fa-solid fa-cart-shopping"></i> Tienda</li>
+                <li>
+                    <a href="/5_ElFland/index.html">
+                        <i class="fa-solid fa-house"></i> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html">
+                        <i class="fa-solid fa-plane-departure"></i> Destino
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-comment"></i> Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i> Tienda
+                    </a>
+                </li>
                 <li class="usuario">
                     <i class="fa-solid fa-user"></i> Usuario
                     <div class="dropdown">
@@ -40,49 +61,106 @@
                         <label for="password">Contraseña:</label>
                         <input type="password" id="password" placeholder="Introduce tu contraseña" />
                         <button>Iniciar Sesión</button>
-                        <p class="registro">¿No tienes cuenta? <a href="paginas_enlaces/registro/Registro.html">Regístrate aquí</a></p>
+                        <p class="registro">¿No tienes cuenta? <a href="/5_ElFland/paginas_enlaces/registro/Registro.html">Regístrate aquí</a></p>
                     </div>
                 </li>
-            </ul>
+            </ul><!-- Fin de la lista desordenada -->
         </nav> <!-- Fin Navegacion -->
-    </div>  <!-- >Fin Cabecera -->
+    </div>  <!-- Fin Cabecera -->
 
-    <!-- Cuerpo principal -->
-    <div class="cuerpo">
-        <!-- Sección con texto e imagen de guía redonda -->
-        <div class="seccion">
-            <div class="texto">
-                <h2>Explora destinos increíbles</h2>
-                <p>Descubre los lugares más impresionantes del mundo con nuestras guías especializadas...</p>
-                <div class="foto-guia">
-                    <img src="/5_ElFland/Imagenes/Galadriel.jpg" alt="Guía">
-                </div>
+
+    <!-- Sección de destinos -->
+    <section class="destinos">
+        <h2>Todos los Destinos de ElFland</h2>
+        <div class="lista-destinos">
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/rivendel.jpg" alt="Rivendel">
+                <h3>Rivendel</h3>
+                <p>Un refugio élfico, conocido por su belleza y paz, donde encontrarás sabiduría y magia.</p>
+                <button>Ver más</button>
             </div>
-            <div class="imagen-grande">
-                <img src="/5_ElFland/Imagenes/Gondor.jpg" alt="Destino grande">
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/La_Comarca.webp" alt="La Comarca">
+                <h3>La Comarca</h3>
+                <p>La tierra pacífica de los hobbits, con colinas verdes y una vida tranquila.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/Minas Tirith.webp" alt="Minas Tirith">
+                <h3>Minas Tirith</h3>
+                <p>La majestuosa ciudad de Gondor, una fortaleza blanca que resiste la oscuridad.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/Lothlórien.webp" alt="Lothlórien">
+                <h3>Lothlórien</h3>
+                <p>Un bosque encantado donde los elfos viven en armonía con la naturaleza.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/Moria.jpg" alt="Moria">
+                <h3>Moria</h3>
+                <p>Antigua ciudad enana, ahora en ruinas y plagada de peligros, hogar del Balrog.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/mordor.jpg" alt="Mordor">
+                <h3>Mordor</h3>
+                <p>Una tierra oscura y peligrosa, hogar de Sauron y sus ejércitos.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/erebor.jpg" alt="Erebor">
+                <h3>Erebor</h3>
+                <p>La Montaña Solitaria, una rica ciudad enana recuperada del dragón Smaug.</p>
+                <button>Ver más</button>
+            </div>
+            <div class="destino">
+                <img src="/5_ElFland/Imagenes/Rohan.jpg" alt="Rohan">
+                <h3>Rohan</h3>
+                <p>La tierra de los jinetes, famosa por sus caballos y guerreros valientes.</p>
+                <button>Ver más</button>
             </div>
         </div>
+    </section>
     
-        <!-- Repetimos la estructura para otras secciones -->
-        <div class="seccion inversa">
-            <div class="texto">
-                <h2>Viajes personalizados</h2>
-                <p>Nuestra experiencia y dedicación nos permiten crear viajes a medida...</p>
-                <div class="foto-guia">
-                    <img src="/5_ElFland/Imagenes/guia.jpg" alt="Guía">
-                </div>
-            </div>
-            <div class="imagen-mediana">
-                <img src="/5_ElFland/Imagenes/Galadriel.jpg" alt="Destino mediano">
-            </div>
-        </div>
-    </div>
-    
-
 
     <!-- Pie de página -->
     <div class="pie-de-pagina">
-        <p>© 2024 Mi Agencia de Viajes. Todos los derechos reservados.</p>
+        <div class="contenido-pie">
+            <div class="informacion">
+                <h2>Agencia de Viajes ElFland</h2>
+                <p>Transformamos tus sueños en aventuras inolvidables.</p>
+                <p>&copy; 2024 Todos los derechos reservados.</p>
+                <p>Teléfono: <a href="tel:+34123456789">+34 123 456 789</a></p>
+                <p>Email: <a href="mailto:contacto@elfland.com">contacto@elfland.com</a></p>
+            </div>
+            <div class="enlaces-utiles">
+                <h2>Enlaces Útiles</h2>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <h2>Síguenos</h2>
+                <div class="iconos">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="suscripcion">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <form>
+                <input type="email" placeholder="Ingresa tu email" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
