@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Web con Tailwind CSS</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Encabezado -->
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="/Hito_3/Imagenes/file.png" alt="Logo" class="w-10 h-10 mr-2">
+        <h1 class="text-2xl font-bold">Mi Página Web</h1>
+      </div>
+      <!-- Menú de navegación -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#" class="hover:underline">Categorías</a></li>
+          <li><a href="#" class="hover:underline">Quiénes somos</a></li>
+          <li><a href="#" class="hover:underline">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cuerpo -->
+  <main class="flex-grow bg-gray-100 p-6">
+    <div class="container mx-auto">
+      <div class="text-center mb-8">
+        <img src="/Hito_3/Imagenes/baner5.png" alt="Imagen de ficha" class="w-full h-auto mb-2">
+        <h2 class="text-3xl font-bold mb-4">¿Quienes somos?</h2>
+        <p class="text-lg mb-4">Este es el texto que aparece debajo del título. Aquí puedes añadir una descripción más detallada o contenido relacionado según tus necesidades.</p>
+        <h2 class="text-3xl font-bold mt-8 mb-4">Quiénes somos</h2>
+        <p class="text-lg mb-8">Este es otro texto que aparece debajo del segundo título. Aquí puedes proporcionar más información sobre tu equipo, tus valores o la misión de tu organización.</p>
+      </div>
+
+      <!-- Fichas -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Ficha 1 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 1</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 1" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 1.</p>
+          <p class="text-xs text-gray-600">Publicado el 11 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Juan Pérez</p>
+        </div>
+        <!-- Ficha 2 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 2</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 2" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 2.</p>
+          <p class="text-xs text-gray-600">Publicado el 12 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Ana López</p>
+        </div>
+        <!-- Ficha 3 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 3</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 3" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 3.</p>
+          <p class="text-xs text-gray-600">Publicado el 13 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Carlos Gómez</p>
+        </div>
+        <!-- Ficha 4 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 4</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 4" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 4.</p>
+          <p class="text-xs text-gray-600">Publicado el 14 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Laura Ruiz</p>
+        </div>
+        <!-- Ficha 5 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 5</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 5" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 5.</p>
+          <p class="text-xs text-gray-600">Publicado el 15 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Mario García</p>
+        </div>
+        <!-- Ficha 6 -->
+        <div class="bg-white p-3 rounded shadow-md">
+          <h3 class="text-lg font-bold mb-1">Título de la Ficha 6</h3>
+          <img src="https://via.placeholder.com/150" alt="Imagen de ficha 6" class="w-full h-auto mb-2">
+          <p class="text-sm mb-1">Resumen breve de la ficha 6.</p>
+          <p class="text-xs text-gray-600">Publicado el 16 de noviembre de 2024</p>
+          <p class="text-xs text-gray-600">Autor: Sofía Martínez</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-blue-800 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
