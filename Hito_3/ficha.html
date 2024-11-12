@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículo - Mi Página Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- Encabezado -->
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img src="/Hito_3/Imagenes/file.png" alt="Logo" class="w-10 h-10 mr-2">
+        <h1 class="text-2xl font-bold">Mi Página Web</h1>
+      </div>
+      <!-- Menú de navegación -->
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#" class="hover:underline">Inicio</a></li>
+          <li><a href="#" class="hover:underline">Categorías</a></li>
+          <li><a href="#" class="hover:underline">Quiénes somos</a></li>
+          <li><a href="#" class="hover:underline">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cuerpo -->
+  <main class="flex-grow bg-gray-100 p-6">
+    <div class="container mx-auto">
+      <!-- Artículo -->
+      <article class="bg-white p-6 rounded shadow-md mb-8">
+        <h2 class="text-4xl font-bold mb-4">Título del Artículo</h2>
+        <div class="mb-4">
+          <p class="text-sm text-gray-600">Publicado el <span class="font-semibold">12 de noviembre de 2024</span> por <span class="font-semibold">Ana López</span></p>
+          <p class="text-sm text-gray-600">Categoría: <span class="font-semibold">Tecnología</span></p>
+        </div>
+        <p class="mb-4">Este es el contenido completo del artículo. Aquí puedes incluir un texto más extenso con imágenes, vídeos y cualquier otro contenido relacionado con el tema.</p>
+        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <!-- Formulario de comentarios -->
+        <section class="mt-8">
+          <h3 class="text-2xl font-bold mb-4">Comentarios</h3>
+          <form class="mb-4">
+            <label for="nombre" class="block text-sm font-medium mb-1">Nombre:</label>
+            <input type="text" id="nombre" class="w-full p-2 border border-gray-300 rounded mb-2" placeholder="Ingresa tu nombre">
+
+            <label for="comentario" class="block text-sm font-medium mb-1">Comentario:</label>
+            <textarea id="comentario" class="w-full p-2 border border-gray-300 rounded mb-2" placeholder="Escribe tu comentario"></textarea>
+
+            <button type="submit" class="p-2 bg-blue-600 text-white rounded hover:bg-blue-700">Enviar</button>
+          </form>
+
+          <!-- Lista de comentarios -->
+          <div class="mt-4">
+            <p class="text-sm mb-2"><strong>Juan Pérez:</strong> ¡Muy buen artículo!</p>
+            <p class="text-sm mb-2"><strong>Laura Ruiz:</strong> Gracias por la información, me ha sido de gran ayuda.</p>
+          </div>
+        </section>
+      </article>
+
+      <!-- Artículos relacionados -->
+      <section>
+        <h3 class="text-2xl font-bold mb-4">Otros artículos que pueden interesarte</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white p-3 rounded shadow-md">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 1</a></h4>
+            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          </div>
+          <div class="bg-white p-3 rounded shadow-md">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 2</a></h4>
+            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          </div>
+          <div class="bg-white p-3 rounded shadow-md">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 3</a></h4>
+            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="bg-blue-800 text-white p-4">
+    <div class="container mx-auto text-center">
+      <p>© 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
