@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artículo - Mi Página Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<!-- Encabezado -->
+<div class="cabecera bg-green-600 fixed z-50 flex flex-col lg:flex-row justify-between items-center p-2 w-full shadow-md">
+    <!-- Logo y Título -->
+    <div class="logo-titulo flex items-center justify-center mb-2 lg:mb-0">
+      <div class="logo">
+        <img src="Imagenes/file.png" alt="Logo de la Agencia ElFland" class="h-12 lg:h-16 max-w-full" />
+      </div>
+      <div class="titulo ml-2 lg:ml-4">
+        <h1 class="text-lg lg:text-2xl text-white text-center">Agencia de Viajes ElFland</h1>
+      </div>
+    </div>
+  
+    <!-- Navegación -->
+    <nav class="w-full lg:w-auto">
+      <ul class="navegacion flex flex-wrap gap-2 lg:gap-5 text-white justify-center lg:justify-start">
+        <li class="relative">
+          <a href="/5_ElFland/index.html" class="hover:underline flex items-center">
+            <i class="fa-solid fa-house mr-2"></i> Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html" class="hover:underline flex items-center">
+            <i class="fa-solid fa-plane-departure mr-2"></i> Destino
+          </a>
+        </li>
+        <li>
+          <a href="/Hito_3/index.html" class="hover:underline flex items-center">
+            <i class="fa-solid fa-comment mr-2"></i> Blog
+          </a>
+        </li>
+        <li>
+          <a href="#" class="hover:underline flex items-center">
+            <i class="fa-solid fa-cart-shopping mr-2"></i> Tienda
+          </a>
+        </li>
+        <li class="usuario relative">
+          <i class="fa-solid fa-user mr-2"></i> Usuario
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+
+     <!-- Cuerpo -->
+     <main class="flex-grow bg-gray-100 p-6 mt-20">
+        <div class="bg-white p-6 rounded shadow-md max-w-6xl mx-auto">
+          <div class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
+            <!-- Foto del Autor -->
+            <div class="mb-6 lg:mb-0">
+              <img src="Imagenes/Galadriel.jpg" alt="Foto del Autor" class="w-40 h-40 rounded-full object-cover lg:w-48 lg:h-48">
+            </div>
+      
+            <!-- Información del Autor -->
+            <div class="flex-grow">
+              <!-- Nombre del Autor -->
+              <h2 class="text-4xl font-bold mb-2">Ana López</h2>
+              <p class="text-lg text-gray-700 mb-4">Ana López es una apasionada viajera que ha recorrido los rincones más remotos y fascinantes del mundo. Sus relatos transportan a los lectores a experiencias vividas, con detalles que despiertan los sentidos.</p>
+              
+              <!-- Antecedentes del Autor -->
+              <div class="mb-4">
+                <h3 class="text-2xl font-semibold mb-1">Antecedentes</h3>
+                <p class="text-gray-600">Nacida en Madrid, España, Ana siempre ha sentido una fuerte conexión con la naturaleza y las culturas del mundo. Desde joven, su pasión por explorar y compartir historias la llevó a documentar sus experiencias a través de palabras y fotografías.</p>
+              </div>              
+              <!-- Intereses y Pasiones -->
+              <div class="mb-4">
+                <h3 class="text-2xl font-semibold mb-1">Intereses y Pasiones</h3>
+                <p class="text-gray-600">Ana disfruta de la fotografía de paisajes, la escritura creativa y la conexión con las comunidades locales. Le apasiona inspirar a otros a descubrir la belleza del mundo y a valorar cada pequeño detalle de sus viajes.</p>
+              </div>
+             <!-- Logros Notables -->
+             <div class="mb-4">
+                <h3 class="text-2xl font-semibold mb-1">Logros Notables</h3>
+                <ul class="list-disc pl-5 text-gray-600">
+                <li><span class="font-semibold">Libros Publicados:</span> Autora de "Explorando la Tierra Media: Aventuras y Lugares Mágicos" y "Viajes Inmortales: Un Recorrido Élfico por la Tierra Media".</li>
+                <li><span class="font-semibold">Conferencias y Eventos:</span> Ponente destacada en la "Conferencia Internacional de Estudios de la Tierra Media 2023" y participante en "Encuentro de Cronistas de Arda".</li>
+                <li><span class="font-semibold">Premios y Reconocimientos:</span> Ganadora del "Premio Élfico de Literatura Fantástica 2022" y galardonada con la "Orden de los Caminantes de Númenor" por su contribución a la divulgación de la cultura de la Tierra Media.</li>
+                </ul>
+            </div>
+              
+              <!-- Enlaces a redes sociales -->
+              <div class="flex space-x-4 mt-4">
+                <a href="https://www.facebook.com/" target="_blank" class="text-blue-600 hover:text-blue-800">
+                  <i class="fa-brands fa-facebook-f text-2xl"></i>
+                </a>
+                <a href="https://www.twitter.com/" target="_blank" class="text-blue-400 hover:text-blue-600">
+                  <i class="fa-brands fa-twitter text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="text-pink-500 hover:text-pink-700">
+                  <i class="fa-brands fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="text-blue-700 hover:text-blue-900">
+                  <i class="fa-brands fa-linkedin-in text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+       
+      
+
+
+
+
+
+
+
+
+   <!-- Pie de página -->
+   <footer class="bg-yellow-800 text-white p-10 text-center">
+    <div class="flex flex-grow justify-around items-start">
+      <div class="informacion max-w-xs">
+        <h2 class="text-2xl font-semibold">Agencia de Viajes ElFland</h2>
+        <p>Transformamos tus sueños en aventuras inolvidables.</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p>Teléfono: <a href="tel:+34123456789" class="text-white hover:underline">+34 123 456 789</a></p>
+        <p>Email: <a href="mailto:contacto@elfland.com" class="text-white hover:underline">contacto@elfland.com</a></p>
+      </div>
+      <div class="enlaces-utiles max-w-xs">
+        <h2 class="text-xl font-semibold">Enlaces Útiles</h2>
+        <ul class="list-none space-y-2">
+          <li><a href="#" class="hover:underline">Política de Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Términos y Condiciones</a></li>
+          <li><a href="#" class="hover:underline">Preguntas Frecuentes</a></li>
+          <li><a href="#" class="hover:underline">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="redes-sociales max-w-xs">
+        <h2 class="text-xl font-semibold">Síguenos</h2>
+        <div class="flex justify-center space-x-4">
+          <a href="https://www.facebook.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  </body>

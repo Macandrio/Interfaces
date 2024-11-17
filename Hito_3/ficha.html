@@ -5,42 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Artículo - Mi Página Web</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
 </head>
 <body class="flex flex-col min-h-screen">
 
-  <!-- Encabezado -->
-  <header class="bg-blue-600 text-white p-4">
-    <div class="container mx-auto flex items-center justify-between">
-      <!-- Logo -->
-      <div class="flex items-center">
-        <img src="/Hito_3/Imagenes/file.png" alt="Logo" class="w-10 h-10 mr-2">
-        <h1 class="text-2xl font-bold">Mi Página Web</h1>
-      </div>
-      <!-- Menú de navegación -->
-      <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#" class="hover:underline">Inicio</a></li>
-          <li><a href="#" class="hover:underline">Categorías</a></li>
-          <li><a href="#" class="hover:underline">Quiénes somos</a></li>
-          <li><a href="#" class="hover:underline">Contacto</a></li>
-        </ul>
-      </nav>
+<!-- Encabezado -->
+<div class="cabecera bg-green-600 fixed z-50 flex flex-col lg:flex-row justify-between items-center p-2 w-full shadow-md">
+  <!-- Logo y Título -->
+  <div class="logo-titulo flex items-center justify-center mb-2 lg:mb-0">
+    <div class="logo">
+      <img src="Imagenes/file.png" alt="Logo de la Agencia ElFland" class="h-12 lg:h-16 max-w-full" />
     </div>
-  </header>
+    <div class="titulo ml-2 lg:ml-4">
+      <h1 class="text-lg lg:text-2xl text-white text-center">Agencia de Viajes ElFland</h1>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <nav class="w-full lg:w-auto">
+    <ul class="navegacion flex flex-wrap gap-2 lg:gap-5 text-white justify-center lg:justify-start">
+      <li class="relative">
+        <a href="/5_ElFland/index.html" class="hover:underline flex items-center">
+          <i class="fa-solid fa-house mr-2"></i> Inicio
+        </a>
+      </li>
+      <li>
+        <a href="/5_ElFland/paginas_enlaces/sitios-populares/sitios.html" class="hover:underline flex items-center">
+          <i class="fa-solid fa-plane-departure mr-2"></i> Destino
+        </a>
+      </li>
+      <li>
+        <a href="/Hito_3/index.html" class="hover:underline flex items-center">
+          <i class="fa-solid fa-comment mr-2"></i> Blog
+        </a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline flex items-center">
+          <i class="fa-solid fa-cart-shopping mr-2"></i> Tienda
+        </a>
+      </li>
+      <li class="usuario relative">
+        <i class="fa-solid fa-user mr-2"></i> Usuario
+      </li>
+    </ul>
+  </nav>
+</div>
+
 
   <!-- Cuerpo -->
-  <main class="flex-grow bg-gray-100 p-6">
+  <main class="flex-grow bg-gray-100 p-6 mt-20">
     <div class="container mx-auto">
       <!-- Artículo -->
       <article class="bg-white p-6 rounded shadow-md mb-8">
-        <h2 class="text-4xl font-bold mb-4">Título del Artículo</h2>
-        <div class="mb-4">
-          <p class="text-sm text-gray-600">Publicado el <span class="font-semibold">12 de noviembre de 2024</span> por <span class="font-semibold">Ana López</span></p>
-          <p class="text-sm text-gray-600">Categoría: <span class="font-semibold">Tecnología</span></p>
-        </div>
-        <p class="mb-4">Este es el contenido completo del artículo. Aquí puedes incluir un texto más extenso con imágenes, vídeos y cualquier otro contenido relacionado con el tema.</p>
-        <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+        <h2 class="text-4xl font-bold mb-10 text-center mt-4">Mejor sitio para explorar</h2>
 
+        <div class="flex justify-center">
+          <img src="/Hito_3/Imagenes/baner4.jpeg" alt="Descripción de la imagen" class="max-w-20 h-auto mb-6">
+        </div>
+        <p class="mb-4 text-justify">El bosque de senderismo es un refugio natural que ofrece una experiencia única para los amantes de la naturaleza y la aventura. Al adentrarme en sus senderos, fui recibido por el fresco aroma de los pinos y el suave crujir de las hojas bajo mis pies. Los rayos del sol se filtraban entre las copas de los árboles, creando un juego de luces y sombras que transformaba el paisaje en un espectáculo visual.
+
+          El camino serpenteaba a través de colinas y valles, revelando a cada paso nuevas maravillas: un arroyo cristalino que susurraba al pasar, un grupo de flores silvestres que brillaban con colores vivos y el canto de las aves que llenaba el aire con su melodía. A mitad del recorrido, encontré una pequeña cabaña de madera, un punto de descanso ideal para disfrutar de un almuerzo y contemplar la serenidad del bosque.
+          
+          Mientras continuaba, sentí cómo el estrés y las preocupaciones del día a día se desvanecían, reemplazados por una sensación de conexión con la tierra y el entorno. Cada tramo era un recordatorio de la belleza simple y poderosa de la naturaleza. El bosque de senderismo no solo me ofreció un desafío físico, sino también un espacio para reflexionar y recargar energías. Fue una experiencia revitalizante que atesoraré siempre.</p>
+          <div class="mb-4">
+            <p class="text-sm text-gray-600">Publicado el <span class="font-semibold">11 de noviembre de 2024</span> por <a href="autor.html" class="font-semibold text-blue-600 hover:underline">Ana López</a></p>
+            <p class="text-sm text-gray-600">Categoría: <span class="font-semibold">Viajes</span></p>
+          </div>
         <!-- Formulario de comentarios -->
         <section class="mt-8">
           <h3 class="text-2xl font-bold mb-4">Comentarios</h3>
@@ -66,28 +96,62 @@
       <section>
         <h3 class="text-2xl font-bold mb-4">Otros artículos que pueden interesarte</h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div class="bg-white p-3 rounded shadow-md">
-            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 1</a></h4>
-            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          <div class="bg-white p-3 rounded shadow-md transform transition-transform hover:scale-105">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Senderismo en benacantil</a></h4>
+            <p class="text-sm mb-1">Para pasar el dia en familia.</p>
           </div>
-          <div class="bg-white p-3 rounded shadow-md">
-            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 2</a></h4>
-            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          <div class="bg-white p-3 rounded shadow-md transform transition-transform hover:scale-105">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Montañas del Sajarote</a></h4>
+            <p class="text-sm mb-1">Sitio para los mas abentureros.</p>
           </div>
-          <div class="bg-white p-3 rounded shadow-md">
-            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Título de Artículo Relacionado 3</a></h4>
-            <p class="text-sm mb-1">Resumen breve de este artículo.</p>
+          <div class="bg-white p-3 rounded shadow-md transform transition-transform hover:scale-105">
+            <h4 class="text-lg font-bold mb-1"><a href="#" class="hover:underline">Luna de miel en bajdoej</a></h4>
+            <p class="text-sm mb-1">Mejor sitio para disfruitrar.</p>
           </div>
         </div>
       </section>
+      
     </div>
   </main>
 
   <!-- Pie de página -->
-  <footer class="bg-blue-800 text-white p-4">
-    <div class="container mx-auto text-center">
-      <p>© 2024 Mi Página Web. Todos los derechos reservados.</p>
+  <footer class="bg-yellow-800 text-white p-10 text-center">
+    <div class="flex flex-grow justify-around items-start">
+      <div class="informacion max-w-xs">
+        <h2 class="text-2xl font-semibold">Agencia de Viajes ElFland</h2>
+        <p>Transformamos tus sueños en aventuras inolvidables.</p>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+        <p>Teléfono: <a href="tel:+34123456789" class="text-white hover:underline">+34 123 456 789</a></p>
+        <p>Email: <a href="mailto:contacto@elfland.com" class="text-white hover:underline">contacto@elfland.com</a></p>
+      </div>
+      <div class="enlaces-utiles max-w-xs">
+        <h2 class="text-xl font-semibold">Enlaces Útiles</h2>
+        <ul class="list-none space-y-2">
+          <li><a href="#" class="hover:underline">Política de Privacidad</a></li>
+          <li><a href="#" class="hover:underline">Términos y Condiciones</a></li>
+          <li><a href="#" class="hover:underline">Preguntas Frecuentes</a></li>
+          <li><a href="#" class="hover:underline">Contáctanos</a></li>
+        </ul>
+      </div>
+      <div class="redes-sociales max-w-xs">
+        <h2 class="text-xl font-semibold">Síguenos</h2>
+        <div class="flex justify-center space-x-4">
+          <a href="https://www.facebook.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.twitter.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" class="text-white text-2xl hover:text-yellow-400">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
     </div>
+
   </footer>
 
 </body>
