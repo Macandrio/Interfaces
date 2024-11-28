@@ -1,0 +1,21 @@
+.dropdown-menu-custom {
+  position: absolute;
+  top: 100%; /* Coloca el menú justo debajo del botón */
+  left: 0; /* Alinea el menú con el botón activador */
+  transform: translateY(5px); /* Añade un desplazamiento sutil */
+  width: 250px; /* Ajusta el ancho del menú */
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+  display: none; /* Oculta inicialmente */
+  z-index: 1050; /* Asegura que el menú esté sobre otros elementos */
+}
+
+.dropdown-menu-custom.active {
+  display: block; /* Muestra el menú cuando está activo */
+}
+
+
+
+
