@@ -68,7 +68,7 @@
                   </div>
 
                     <!-- Carrito -->
-                    <a class="btn btn-outline-light" href="#">
+                    <a class="btn btn-outline-light" href="/Tienda/Cesta.html">
                       <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
                     </a>
             </div>
@@ -111,26 +111,27 @@
       <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-3"> <!-- Ajuste de filas adaptativas -->
         <!-- Producto 1 -->
         <div class="col">
-          <div class="card h-100 border-0" style="border-radius: 30px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="/Tienda/Imagenes/producto-1.jpg" class="card-img-top" alt="Producto 1" style="height: 250px; object-fit: cover;">
-            <div class="card-body text-start p-2">
-              <h6 class="card-title fs-7">Bolígrafo y marcapáginas</h6>
-              <div class="d-flex align-items-center mb-1">
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-muted"><i class="fas fa-star fa-xs"></i></span>
-                <span class="ms-1 text-muted fs-8">Vendidos: 120</span>
+            <div class="card h-100 border-0" style="border-radius: 30px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <img src="/Tienda/Imagenes/producto-1.jpg" class="card-img-top" alt="Producto 1" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-start p-2">
+                <h6 class="card-title fs-7">Bolígrafo y marcapáginas</h6>
+                <div class="d-flex align-items-center mb-1">
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-muted"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="ms-1 text-muted fs-8">Vendidos: 120</span>
+                </div>
+                <p class="card-text fs-8">
+                  <s class="text-muted">$19.99</s> <!-- Precio tachado -->
+                  <span class="ms-2">$15.99</span> <!-- Precio actual -->
+                </p>
+                <button class="btn btn-primary btn-sm">Añadir</button>
               </div>
-              <p class="card-text fs-8">
-                <s class="text-muted">$19.99</s> <!-- Precio tachado -->
-                <span class="ms-2">$15.99</span> <!-- Precio actual -->
-              </p>
-              <button class="btn btn-primary btn-sm">Añadir</button>
             </div>
-          </div>
         </div>
+        
         <!-- Producto 2 -->
         <div class="col">
           <div class="card h-100 border-0" style="max-width: 200px; border-radius: 30px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
@@ -215,22 +216,24 @@
         </div>
         <!-- Producto 6 -->
         <div class="col">
-          <div class="card h-100 border-0" style="border-radius: 30px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-            <img src="/Tienda/Imagenes/producto-6.jpg" class="card-img-top bordes-redondos" alt="Producto 6" style="height: 250px; object-fit: cover;">
-            <div class="card-body text-start p-2">
-              <h6 class="card-title fs-7">Replica anillo</h6>
-              <div class="d-flex align-items-center mb-1">
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
-                <span class="ms-1 text-muted fs-8">Vendidos: 500</span>
+          <a href="/Tienda/producto.html">
+            <div class="card h-100 border-0" style="border-radius: 30px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+              <img src="/Tienda/Imagenes/producto-6.jpg" class="card-img-top bordes-redondos" alt="Producto 6" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-start p-2">
+                <h6 class="card-title fs-7">Replica anillo</h6>
+                <div class="d-flex align-items-center mb-1">
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="text-warning"><i class="fas fa-star fa-xs"></i></span>
+                  <span class="ms-1 text-muted fs-8">Vendidos: 500</span>
+                </div>
+                <p class="card-text fs-8">$65.99</p>
+                <button class="btn btn-primary btn-sm">Añadir</button>
               </div>
-              <p class="card-text fs-8">$65.99</p>
-              <button class="btn btn-primary btn-sm">Añadir</button>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

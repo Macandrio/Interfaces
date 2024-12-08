@@ -3,26 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto - Tienda</title>
-  <!-- Enlace a Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Enlace a Font Awesome -->
-  <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
-  <style>
-    .product-image {
-      max-height: 450px;
-      object-fit: cover;
-      cursor: zoom-in;
-    }
-    .related-products img {
-      max-height: 150px;
-      object-fit: cover;
-    }
-  </style>
+  <title>Página de Pago - Tienda</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a Font Awesome -->
+    <script src="https://kit.fontawesome.com/9460c07a8e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Cabecera -->
-  <header class="container-fluid bg-success text-light py-3">
+ <!-- Cabecera -->
+ <header class="container-fluid bg-success text-light py-3">
     <div class="container-fluid">
         <div class="row">
             <!-- Contenedor principal -->
@@ -79,7 +68,7 @@
                   </div>
 
                     <!-- Carrito -->
-                    <a class="btn btn-outline-light" href="/Tienda/Cesta.html">
+                    <a class="btn btn-outline-light" href="#">
                       <i class="fa-solid fa-cart-shopping me-2"></i>Carrito
                     </a>
             </div>
@@ -89,82 +78,95 @@
   </header>
 
   <!-- Contenido principal -->
-  <main class="container my-4">
+  <main class="container my-5">
+    <h2 class="fw-bold mb-4">Completa tu Compra</h2>
+
     <div class="row">
-      <!-- Imagen del producto -->
-      <div class="col-md-6 text-center">
-        <img src="/Tienda/Imagenes/producto_1_1.webp" alt="Producto" class="img-fluid product-image mb-3">
-        <div class="d-flex justify-content-center">
-          <img src="/Tienda/Imagenes/producto_1_2.webp" class="img-thumbnail mx-1" alt="Vista miniatura 1" style="max-width: 80px;">
-          <img src="/Tienda/Imagenes/producto_1_3.webp" class="img-thumbnail mx-1" alt="Vista miniatura 2" style="max-width: 80px;">
-        </div>
+      <!-- Formulario de información del cliente -->
+      <div class="col-md-7">
+        <h4 class="mb-3">Información del Cliente</h4>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="telefono" class="form-label">Número de Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" required>
+          </div>
+          
+          <!-- Opciones de envío -->
+          <h4 class="mt-4 mb-3">Opciones de Envío</h4>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="envio" id="envioEstandar" checked>
+            <label class="form-check-label" for="envioEstandar">Envío Estándar (Gratis)</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="envio" id="envioExpres">
+            <label class="form-check-label" for="envioExpres">Envío Exprés (9,99 €)</label>
+          </div>
+
+          <!-- Información de pago -->
+          <h4 class="mt-4 mb-3">Información de Pago</h4>
+          <div class="mb-3">
+            <label for="numeroTarjeta" class="form-label">Número de Tarjeta</label>
+            <input type="text" class="form-control" id="numeroTarjeta" required>
+          </div>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="fechaExpiracion" class="form-label">Fecha de Expiración</label>
+              <input type="text" class="form-control" id="fechaExpiracion" placeholder="MM/AA" required>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="cvv" class="form-label">CVV</label>
+              <input type="text" class="form-control" id="cvv" required>
+            </div>
+          </div>
+        </form>
       </div>
 
-      <!-- Información del producto -->
-      <div class="col-md-6">
-        <h2 class="fw-bold">Nombre del Producto</h2>
-        <p class="text-muted">Plataforma: Marca/Modelo</p>
-        <div class="d-flex align-items-center mb-2">
-          <span class="text-warning"><i class="fas fa-star"></i></span>
-          <span class="text-warning"><i class="fas fa-star"></i></span>
-          <span class="text-warning"><i class="fas fa-star"></i></span>
-          <span class="text-warning"><i class="fas fa-star"></i></span>
-          <span class="text-muted"><i class="fas fa-star"></i></span>
-          <span class="ms-2">(5,896 valoraciones)</span>
-        </div>
-        <p class="fs-4 text-danger">374,00 € <s class="text-muted fs-6">449,00 €</s></p>
-        <p>Envío GRATIS. Financia hasta en 4 cuotas con 0% de interés.</p>
-
-        <!-- Opciones -->
-        <div class="mb-3">
-          <label for="cantidad" class="form-label">Cantidad:</label>
-          <input type="number" id="cantidad" class="form-control w-50" min="1" value="1">
-        </div>
-        <button class="btn btn-primary btn-lg w-100">Añadir a la cesta</button>
-
-        <!-- Especificaciones -->
-        <div class="mt-4">
-          <h5>Especificaciones</h5>
-          <ul>
-            <li>Tamaño: 30x15x10 cm</li>
-            <li>Color: Blanco</li>
-            <li>Materiales: Plástico y metal</li>
-          </ul>
+      <!-- Resumen del pedido -->
+      <div class="col-md-5">
+        <div class="border p-4">
+          <h4 class="fw-bold">Resumen del Pedido</h4>
+          <div class="d-flex justify-content-between">
+            <p class="mb-1">Bolígrafo y Marcapáginas</p>
+            <p class="mb-1">15,99 €</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-1">Mochila Hobbit</p>
+            <p class="mb-1">29,99 €</p>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between">
+            <p class="mb-1">Subtotal:</p>
+            <p class="mb-1">45,98 €</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-1">Impuestos:</p>
+            <p class="mb-1">9,20 €</p>
+          </div>
+          <div class="d-flex justify-content-between">
+            <p class="mb-1">Envío:</p>
+            <p class="mb-1">Gratis</p>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold">
+            <p>Total:</p>
+            <p>55,18 €</p>
+          </div>
+          <button class="btn btn-primary w-100 mt-4">Completar Compra</button>
         </div>
       </div>
     </div>
-
-    <!-- Opiniones -->
-    <div class="mt-5">
-      <h3 class="fw-bold">Opiniones de Clientes</h3>
-      <div class="border p-3 mb-3">
-        <strong>Cliente 1</strong>
-        <p class="mb-1">Excelente producto, muy satisfecho con la compra.</p>
-        <small class="text-muted">5 estrellas</small>
-      </div>
-      <div class="border p-3 mb-3">
-        <strong>Cliente 2</strong>
-        <p class="mb-1">Cumple con lo prometido, aunque el envío fue lento.</p>
-        <small class="text-muted">4 estrellas</small>
-      </div>
-    </div>
-
-    <!-- Productos relacionados -->
-<div class="mt-5">
-    <h3 class="fw-bold">Productos Relacionados</h3>
-    <div class="row related-products g-3">
-      <div class="col-6 col-md-3 d-flex flex-column align-items-start">
-        <img src="/Tienda/Imagenes/producto_1_4.webp" class="img-fluid" alt="Relacionado 1">
-        <p class="small mt-2">Producto Relacionado 1</p>
-      </div>
-      <div class="col-6 col-md-3 d-flex flex-column align-items-start">
-        <img src="/Tienda/Imagenes/producto_1_5.webp" class="img-fluid" alt="Relacionado 2">
-        <p class="small mt-2">Producto Relacionado 2</p>
-      </div>
-    </div>
-  </div>
-  
-  
   </main>
 
   <footer class="bg-dark text-light py-4 mt-5">
